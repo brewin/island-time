@@ -334,6 +334,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#converting-a-daterange-to-an-interval" class="md-nav__link">
+    Converting a DateRange to an interval
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#iterating-over-time-intervals" class="md-nav__link">
     Iterating over time intervals
   </a>
@@ -629,6 +636,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#converting-a-daterange-to-an-interval" class="md-nav__link">
+    Converting a DateRange to an interval
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#iterating-over-time-intervals" class="md-nav__link">
     Iterating over time intervals
   </a>
@@ -738,7 +752,14 @@
 </tr>
 </tbody>
 </table>
-<p>Inclusivity within a time interval is based on the instants defined by the start and end points (ie. timeline order, not natural order), which is in an important consideration for <code>OffsetDateTimeInterval</code> and <code>ZonedDateTimeInterval</code>, where there may be differing offsets.</p>
+<p>For <code>OffsetDateTimeInterval</code> and <code>ZonedDateTimeInterval</code>, inclusivity within a time-based interval is based on the instants defined by the start and end points (ie. timeline order, not natural order), ignoring any local time differences.</p>
+<h3 id="converting-a-daterange-to-an-interval">Converting a <code>DateRange</code> to an interval</h3>
+<p>A <code>DateRange</code> can be converted directly to an interval representing the period from the start of the first day to the end of the last day.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">today</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">dateRange</span><span class="p">:</span> <span class="n">DateRange</span> <span class="p">=</span> <span class="n">today</span> <span class="p">-</span> <span class="m">1.</span><span class="n">weeks</span> <span class="n">until</span> <span class="n">today</span>
+<span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">dateRange</span><span class="p">.</span><span class="n">toInstantIntervalAt</span><span class="p">(</span><span class="n">TimeZone</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">())</span>
+</code></pre></div>
+
 <h3 id="iterating-over-time-intervals">Iterating over time intervals</h3>
 <p>Only <code>InstantInterval</code> allows iteration, though the other types can be converted easily.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">now</span><span class="p">:</span> <span class="n">ZonedDateTime</span> <span class="p">=</span> <span class="n">ZonedDateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
@@ -777,7 +798,7 @@
 <p>In ISO-8601, an "unbounded" interval is referred to as an "open" interval. This conflicts with the mathematical meaning of "open" though (ie. end points that are exclusive rather than inclusive), so we avoid using that terminology.</p>
 </div>
 <h2 id="iso-representation">ISO Representation</h2>
-<p>As with all of the other types in Island Time, calling <code>toString()</code> on an interval will return an ISO represention, which can be converted back to the appropriate interval type using methods like <code>String.toDateRange()</code>.</p>
+<p>As with all of the other types in Island Time, calling <code>toString()</code> on an interval will return an ISO represention, which can be converted back to the appropriate interval type using methods like <code>String.toDateRange()</code> or <code>String.toZonedDateTimeInterval()</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">firstDate</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">MARCH</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
 <span class="k">val</span> <span class="py">secondDate</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">MAY</span><span class="p">,</span> <span class="m">13</span><span class="p">)</span>
 <span class="k">val</span> <span class="py">dateRange</span><span class="p">:</span> <span class="n">DateRange</span> <span class="p">=</span> <span class="n">firstDate</span><span class="p">..</span><span class="n">secondDate</span>

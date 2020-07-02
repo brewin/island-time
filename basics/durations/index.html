@@ -637,7 +637,7 @@
                 <h1 id="durations">Durations</h1>
 <p>In Island Time, durations are fully type-safe. The use of durations in terms of a single unit is encouraged where possible. Date-based periods in terms of multiple units and long time-based durations are also available.</p>
 <h2 id="single-unit-durations">Single Unit Durations</h2>
-<p>Island Time provides inline classes representing each individual duration unit, backed by either a <code>Long</code> or <code>Int</code> -- such as <code>IntYears</code>, <code>IntHours</code>, or <code>LongNanoseconds</code>. This allows the precision of each quantity to be maintained, avoids ambiguitity regarding the meaning of a day (ie. conceptual vs. 24 hours), and is quite efficient as well. When adding or subtracting quantities in mixed units, precision is increased automatically as needed. For example:</p>
+<p>Island Time provides <a href="https://kotlinlang.org/docs/reference/inline-classes.html">inline classes</a> representing each individual duration unit, backed by either a <code>Long</code> or <code>Int</code> -- such as <code>IntYears</code>, <code>IntHours</code>, or <code>LongNanoseconds</code>. This allows the precision of each quantity to be maintained, avoids ambiguitity regarding the meaning of a day (ie. conceptual vs. 24 hours), and is quite efficient as well. When adding or subtracting quantities in mixed units, precision is increased automatically as needed. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// The minimum necessary unit granularity is preserved when</span>
 <span class="c1">// combining different units</span>
 <span class="k">val</span> <span class="py">totalSeconds</span><span class="p">:</span> <span class="n">IntSeconds</span> <span class="p">=</span> <span class="m">5.</span><span class="n">hours</span> <span class="p">+</span> <span class="m">30.</span><span class="n">minutes</span> <span class="p">+</span> <span class="m">1.</span><span class="n">seconds</span>
@@ -658,13 +658,13 @@
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">hours</span><span class="p">:</span> <span class="n">IntHours</span> <span class="p">=</span> <span class="m">60.</span><span class="n">minutes</span><span class="p">.</span><span class="n">inHours</span>
 </code></pre></div>
 
-<p>You can also get the duration between two date-times in terms of any given unit.</p>
+<p>You can also get the duration between two date-times in terms of any given unit, using functions like <code>hoursBetween()</code> or <code>daysBetween()</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">hours</span> <span class="p">=</span> <span class="n">hoursBetween</span><span class="p">(</span><span class="n">firstDateTime</span><span class="p">,</span> <span class="n">secondDateTime</span><span class="p">)</span>
 <span class="k">val</span> <span class="py">absHours</span> <span class="p">=</span> <span class="n">hours</span><span class="p">.</span><span class="n">absoluteValue</span> <span class="c1">// hours may be negative</span>
 </code></pre></div>
 
 <h2 id="duration"><code>Duration</code></h2>
-<p>The <code>Duration</code> class can be used to represent time-based durations that are potentially very large at nanosecond precision. In most cases, it's probably unnecessary to use and single unit durations will be perfectly satisfactory, but you can be assured that overflow won't happen when expressing any duration that fits within the supported time scale.</p>
+<p>The <code>Duration</code> class can be used to represent time-based durations that are potentially very large at nanosecond precision. In most cases, it's probably unnecessary and single unit durations will be perfectly satisfactory, but you can be assured that overflow won't happen when expressing any duration that fits within the supported time scale.</p>
 <p>A single unit duration can be converted to a <code>Duration</code> like so:</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">duration</span><span class="p">:</span> <span class="n">Duration</span> <span class="p">=</span> <span class="m">5.</span><span class="n">seconds</span><span class="p">.</span><span class="n">asDuration</span><span class="p">()</span>
 </code></pre></div>
