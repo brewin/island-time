@@ -1,0 +1,6 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+
+io.islandtime.extensions.parcelize
+io.islandtime.extensions.parcelize.measures
+io.islandtime.extensions.parcelize.ranges

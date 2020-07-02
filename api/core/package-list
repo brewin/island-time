@@ -1,0 +1,149 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:io.islandtime$toDate(kotlin.String)io.islandtime/kotlin.-string/to-date.md
+$dokka.location:io.islandtime$toDate(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-date.md
+$dokka.location:io.islandtime$toDateTime(kotlin.String)io.islandtime/kotlin.-string/to-date-time.md
+$dokka.location:io.islandtime$toDateTime(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-date-time.md
+$dokka.location:io.islandtime$toDayOfWeek(kotlin.Int)io.islandtime/kotlin.-int/to-day-of-week.md
+$dokka.location:io.islandtime$toDayOfWeek(kotlin.Int, io.islandtime.calendar.WeekSettings)io.islandtime/kotlin.-int/to-day-of-week.md
+$dokka.location:io.islandtime$toInstant(kotlin.String)io.islandtime/kotlin.-string/to-instant.md
+$dokka.location:io.islandtime$toInstant(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-instant.md
+$dokka.location:io.islandtime$toMonth(kotlin.Int)io.islandtime/kotlin.-int/to-month.md
+$dokka.location:io.islandtime$toOffsetDateTime(kotlin.String)io.islandtime/kotlin.-string/to-offset-date-time.md
+$dokka.location:io.islandtime$toOffsetDateTime(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-offset-date-time.md
+$dokka.location:io.islandtime$toOffsetTime(kotlin.String)io.islandtime/kotlin.-string/to-offset-time.md
+$dokka.location:io.islandtime$toOffsetTime(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-offset-time.md
+$dokka.location:io.islandtime$toTime(kotlin.String)io.islandtime/kotlin.-string/to-time.md
+$dokka.location:io.islandtime$toTime(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-time.md
+$dokka.location:io.islandtime$toTimeZone(kotlin.String)io.islandtime/kotlin.-string/to-time-zone.md
+$dokka.location:io.islandtime$toUtcOffset(kotlin.String)io.islandtime/kotlin.-string/to-utc-offset.md
+$dokka.location:io.islandtime$toUtcOffset(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-utc-offset.md
+$dokka.location:io.islandtime$toYear(kotlin.String)io.islandtime/kotlin.-string/to-year.md
+$dokka.location:io.islandtime$toYear(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-year.md
+$dokka.location:io.islandtime$toYearMonth(kotlin.String)io.islandtime/kotlin.-string/to-year-month.md
+$dokka.location:io.islandtime$toYearMonth(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-year-month.md
+$dokka.location:io.islandtime$toZonedDateTime(kotlin.String)io.islandtime/kotlin.-string/to-zoned-date-time.md
+$dokka.location:io.islandtime$toZonedDateTime(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime/kotlin.-string/to-zoned-date-time.md
+$dokka.location:io.islandtime.format$numberStyle#java.util.Localeio.islandtime.format/java.util.-locale/number-style.md
+$dokka.location:io.islandtime.jvm$toIslandDate(java.time.LocalDate)io.islandtime.jvm/java.time.-local-date/to-island-date.md
+$dokka.location:io.islandtime.jvm$toIslandDateTime(java.time.LocalDateTime)io.islandtime.jvm/java.time.-local-date-time/to-island-date-time.md
+$dokka.location:io.islandtime.jvm$toIslandDuration(java.time.Duration)io.islandtime.jvm/java.time.-duration/to-island-duration.md
+$dokka.location:io.islandtime.jvm$toIslandInstant(java.time.Instant)io.islandtime.jvm/java.time.-instant/to-island-instant.md
+$dokka.location:io.islandtime.jvm$toIslandOffsetDateTime(java.time.OffsetDateTime)io.islandtime.jvm/java.time.-offset-date-time/to-island-offset-date-time.md
+$dokka.location:io.islandtime.jvm$toIslandOffsetTime(java.time.OffsetTime)io.islandtime.jvm/java.time.-offset-time/to-island-offset-time.md
+$dokka.location:io.islandtime.jvm$toIslandPeriod(java.time.Period)io.islandtime.jvm/java.time.-period/to-island-period.md
+$dokka.location:io.islandtime.jvm$toIslandTime(java.time.LocalTime)io.islandtime.jvm/java.time.-local-time/to-island-time.md
+$dokka.location:io.islandtime.jvm$toIslandTimeZone(java.time.ZoneId)io.islandtime.jvm/java.time.-zone-id/to-island-time-zone.md
+$dokka.location:io.islandtime.jvm$toIslandUtcOffset(java.time.ZoneOffset)io.islandtime.jvm/java.time.-zone-offset/to-island-utc-offset.md
+$dokka.location:io.islandtime.jvm$toIslandYear(java.time.Year)io.islandtime.jvm/java.time.-year/to-island-year.md
+$dokka.location:io.islandtime.jvm$toIslandYearMonth(java.time.YearMonth)io.islandtime.jvm/java.time.-year-month/to-island-year-month.md
+$dokka.location:io.islandtime.jvm$toIslandZonedDateTime(java.time.ZonedDateTime)io.islandtime.jvm/java.time.-zoned-date-time/to-island-zoned-date-time.md
+$dokka.location:io.islandtime.measures$centuries#kotlin.Intio.islandtime.measures/kotlin.-int/centuries.md
+$dokka.location:io.islandtime.measures$centuries#kotlin.Longio.islandtime.measures/kotlin.-long/centuries.md
+$dokka.location:io.islandtime.measures$days#kotlin.Intio.islandtime.measures/kotlin.-int/days.md
+$dokka.location:io.islandtime.measures$days#kotlin.Longio.islandtime.measures/kotlin.-long/days.md
+$dokka.location:io.islandtime.measures$decades#kotlin.Intio.islandtime.measures/kotlin.-int/decades.md
+$dokka.location:io.islandtime.measures$decades#kotlin.Longio.islandtime.measures/kotlin.-long/decades.md
+$dokka.location:io.islandtime.measures$hours#kotlin.Intio.islandtime.measures/kotlin.-int/hours.md
+$dokka.location:io.islandtime.measures$hours#kotlin.Longio.islandtime.measures/kotlin.-long/hours.md
+$dokka.location:io.islandtime.measures$microseconds#kotlin.Intio.islandtime.measures/kotlin.-int/microseconds.md
+$dokka.location:io.islandtime.measures$microseconds#kotlin.Longio.islandtime.measures/kotlin.-long/microseconds.md
+$dokka.location:io.islandtime.measures$milliseconds#kotlin.Intio.islandtime.measures/kotlin.-int/milliseconds.md
+$dokka.location:io.islandtime.measures$milliseconds#kotlin.Longio.islandtime.measures/kotlin.-long/milliseconds.md
+$dokka.location:io.islandtime.measures$minutes#kotlin.Intio.islandtime.measures/kotlin.-int/minutes.md
+$dokka.location:io.islandtime.measures$minutes#kotlin.Longio.islandtime.measures/kotlin.-long/minutes.md
+$dokka.location:io.islandtime.measures$months#kotlin.Intio.islandtime.measures/kotlin.-int/months.md
+$dokka.location:io.islandtime.measures$months#kotlin.Longio.islandtime.measures/kotlin.-long/months.md
+$dokka.location:io.islandtime.measures$nanoseconds#kotlin.Intio.islandtime.measures/kotlin.-int/nanoseconds.md
+$dokka.location:io.islandtime.measures$nanoseconds#kotlin.Longio.islandtime.measures/kotlin.-long/nanoseconds.md
+$dokka.location:io.islandtime.measures$seconds#kotlin.Intio.islandtime.measures/kotlin.-int/seconds.md
+$dokka.location:io.islandtime.measures$seconds#kotlin.Longio.islandtime.measures/kotlin.-long/seconds.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.Duration)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntCenturies)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntDays)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntDecades)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntHours)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntMicroseconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntMilliseconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntMinutes)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntMonths)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntNanoseconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntSeconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntWeeks)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.IntYears)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongCenturies)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongDays)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongDecades)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongHours)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongMicroseconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongMilliseconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongMinutes)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongMonths)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongNanoseconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongSeconds)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongWeeks)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.LongYears)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Int, io.islandtime.measures.Period)io.islandtime.measures/kotlin.-int/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntCenturies)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntDays)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntDecades)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntHours)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntMicroseconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntMilliseconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntMinutes)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntMonths)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntNanoseconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntSeconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntWeeks)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.IntYears)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongCenturies)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongDays)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongDecades)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongHours)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongMicroseconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongMilliseconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongMinutes)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongMonths)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongNanoseconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongSeconds)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongWeeks)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$times(kotlin.Long, io.islandtime.measures.LongYears)io.islandtime.measures/kotlin.-long/times.md
+$dokka.location:io.islandtime.measures$toDuration(kotlin.String)io.islandtime.measures/kotlin.-string/to-duration.md
+$dokka.location:io.islandtime.measures$toDuration(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.measures/kotlin.-string/to-duration.md
+$dokka.location:io.islandtime.measures$toIslandDays(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-days.md
+$dokka.location:io.islandtime.measures$toIslandDuration(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-duration.md
+$dokka.location:io.islandtime.measures$toIslandHours(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-hours.md
+$dokka.location:io.islandtime.measures$toIslandMicroseconds(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-microseconds.md
+$dokka.location:io.islandtime.measures$toIslandMilliseconds(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-milliseconds.md
+$dokka.location:io.islandtime.measures$toIslandMinutes(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-minutes.md
+$dokka.location:io.islandtime.measures$toIslandNanoseconds(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-nanoseconds.md
+$dokka.location:io.islandtime.measures$toIslandSeconds(kotlin.time.Duration)io.islandtime.measures/kotlin.time.-duration/to-island-seconds.md
+$dokka.location:io.islandtime.measures$toPeriod(kotlin.String)io.islandtime.measures/kotlin.-string/to-period.md
+$dokka.location:io.islandtime.measures$toPeriod(kotlin.String, io.islandtime.parser.DateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.measures/kotlin.-string/to-period.md
+$dokka.location:io.islandtime.measures$weeks#kotlin.Intio.islandtime.measures/kotlin.-int/weeks.md
+$dokka.location:io.islandtime.measures$weeks#kotlin.Longio.islandtime.measures/kotlin.-long/weeks.md
+$dokka.location:io.islandtime.measures$years#kotlin.Intio.islandtime.measures/kotlin.-int/years.md
+$dokka.location:io.islandtime.measures$years#kotlin.Longio.islandtime.measures/kotlin.-long/years.md
+$dokka.location:io.islandtime.ranges$toDateRange(kotlin.String)io.islandtime.ranges/kotlin.-string/to-date-range.md
+$dokka.location:io.islandtime.ranges$toDateRange(kotlin.String, io.islandtime.parser.GroupedDateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.ranges/kotlin.-string/to-date-range.md
+$dokka.location:io.islandtime.ranges$toDateTimeInterval(kotlin.String)io.islandtime.ranges/kotlin.-string/to-date-time-interval.md
+$dokka.location:io.islandtime.ranges$toDateTimeInterval(kotlin.String, io.islandtime.parser.GroupedDateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.ranges/kotlin.-string/to-date-time-interval.md
+$dokka.location:io.islandtime.ranges$toInstantInterval(kotlin.String)io.islandtime.ranges/kotlin.-string/to-instant-interval.md
+$dokka.location:io.islandtime.ranges$toInstantInterval(kotlin.String, io.islandtime.parser.GroupedDateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.ranges/kotlin.-string/to-instant-interval.md
+$dokka.location:io.islandtime.ranges$toOffsetDateTimeInterval(kotlin.String)io.islandtime.ranges/kotlin.-string/to-offset-date-time-interval.md
+$dokka.location:io.islandtime.ranges$toOffsetDateTimeInterval(kotlin.String, io.islandtime.parser.GroupedDateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.ranges/kotlin.-string/to-offset-date-time-interval.md
+$dokka.location:io.islandtime.ranges$toZonedDateTimeInterval(kotlin.String)io.islandtime.ranges/kotlin.-string/to-zoned-date-time-interval.md
+$dokka.location:io.islandtime.ranges$toZonedDateTimeInterval(kotlin.String, io.islandtime.parser.GroupedDateTimeParser, io.islandtime.parser.DateTimeParserSettings)io.islandtime.ranges/kotlin.-string/to-zoned-date-time-interval.md
+io.islandtime
+io.islandtime.base
+io.islandtime.calendar
+io.islandtime.clock
+io.islandtime.darwin
+io.islandtime.format
+io.islandtime.jvm
+io.islandtime.locale
+io.islandtime.measures
+io.islandtime.operators
+io.islandtime.parser
+io.islandtime.ranges
+io.islandtime.zone

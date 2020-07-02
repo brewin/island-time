@@ -1,0 +1,1143 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
+      
+      
+        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/dates-and-times/">
+      
+      
+        <meta name="author" content="Erik Christensen">
+      
+      <link rel="shortcut icon" href="../../images/logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Dates and Times - Island Time</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dates-and-times" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Island Time
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Dates and Times
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/erikc5000/island-time/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    island-time
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    Island Time
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/erikc5000/island-time/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    island-time
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      The Basics
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="The Basics" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        The Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general-design/" title="General Design" class="md-nav__link">
+      General Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Dates and Times
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Dates and Times" class="md-nav__link md-nav__link--active">
+      Dates and Times
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#date-representations" class="md-nav__link">
+    Date Representations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-of-day" class="md-nav__link">
+    Time of Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combined-date-and-time-of-day" class="md-nav__link">
+    Combined Date and Time of Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instants-in-time" class="md-nav__link">
+    Instants in Time
+  </a>
+  
+    <nav class="md-nav" aria-label="Instants in Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utcoffset-vs-timezone" class="md-nav__link">
+    UtcOffset vs. TimeZone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoneddatetime-vs-offsetdatetime" class="md-nav__link">
+    ZonedDateTime vs. OffsetDateTime
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns-and-operators" class="md-nav__link">
+    Patterns and Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns and Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-at-operator" class="md-nav__link">
+    The at operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy" class="md-nav__link">
+    copy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic" class="md-nav__link">
+    Arithmetic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-representation" class="md-nav__link">
+    ISO representation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-and-end-of-time-periods" class="md-nav__link">
+    Start and end of time periods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previous-or-next-day-of-week" class="md-nav__link">
+    Previous or next day of week
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rounding" class="md-nav__link">
+    Rounding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../durations/" title="Durations" class="md-nav__link">
+      Durations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../time-intervals/" title="Time Intervals" class="md-nav__link">
+      Time Intervals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing/" title="Parsing" class="md-nav__link">
+      Parsing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../interop/" title="Interop" class="md-nav__link">
+      Interop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced Topics
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Advanced Topics" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Advanced Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/custom-providers/" title="Custom Providers" class="md-nav__link">
+      Custom Providers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Extensions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Extensions" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/serialization/" title="Serialization" class="md-nav__link">
+      Serialization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/parcelize/" title="Parcelize" class="md-nav__link">
+      Parcelize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/threetenabp/" title="ThreeTen Android Backport" class="md-nav__link">
+      ThreeTen Android Backport
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/core/" title="core" class="md-nav__link">
+      core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/parcelize/" title="parcelize-extensions" class="md-nav__link">
+      parcelize-extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/serialization/" title="serialization-extensions" class="md-nav__link">
+      serialization-extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/threetenabp/" title="threetenabp-extensions" class="md-nav__link">
+      threetenabp-extensions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#date-representations" class="md-nav__link">
+    Date Representations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-of-day" class="md-nav__link">
+    Time of Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combined-date-and-time-of-day" class="md-nav__link">
+    Combined Date and Time of Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instants-in-time" class="md-nav__link">
+    Instants in Time
+  </a>
+  
+    <nav class="md-nav" aria-label="Instants in Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utcoffset-vs-timezone" class="md-nav__link">
+    UtcOffset vs. TimeZone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoneddatetime-vs-offsetdatetime" class="md-nav__link">
+    ZonedDateTime vs. OffsetDateTime
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns-and-operators" class="md-nav__link">
+    Patterns and Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns and Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-at-operator" class="md-nav__link">
+    The at operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy" class="md-nav__link">
+    copy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic" class="md-nav__link">
+    Arithmetic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-representation" class="md-nav__link">
+    ISO representation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-and-end-of-time-periods" class="md-nav__link">
+    Start and end of time periods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previous-or-next-day-of-week" class="md-nav__link">
+    Previous or next day of week
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rounding" class="md-nav__link">
+    Rounding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/erikc5000/island-time/edit/master/docs/basics/dates-and-times.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="dates-and-times">Dates and Times</h1>
+<p>Island Time has a wide array of different date-time classes, each tailored to its own set of use cases. These classes model the date and timekeeping system defined in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a>, the international standard for the exchange of dates and times. The ISO standard applies the present-day Gregorian calendar <em>proleptically</em>, which is to say, even to the time period before it was <a href="https://en.wikipedia.org/wiki/Adoption_of_the_Gregorian_calendar">adopted</a>.</p>
+<h2 id="date-representations">Date Representations</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Precision</th>
+<th>Example ISO Representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Date</code></td>
+<td>day</td>
+<td><code>2020-02-15</code></td>
+</tr>
+<tr>
+<td><code>YearMonth</code></td>
+<td>month</td>
+<td><code>2020-02</code></td>
+</tr>
+<tr>
+<td><code>Year</code></td>
+<td>year</td>
+<td><code>2020</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>Date</code> class represents a date in an ambiguous region. It could be in New York City. It could be in Tokyo. The instants in time that define the start and end of a <code>Date</code> can only be determined in the context of a particular time zone -- hence the <em>ambiguous</em> part.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get the current date in the local time zone of the system</span>
+<span class="k">val</span> <span class="py">today</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="c1">// Create a date from components</span>
+<span class="k">val</span> <span class="py">leapDay</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">February</span><span class="p">,</span> <span class="m">29</span><span class="p">)</span>
+
+<span class="c1">// Parse a date from ISO string representation</span>
+<span class="k">val</span> <span class="py">cincoDeMayo</span> <span class="p">=</span> <span class="s">&quot;2020-05-05&quot;</span><span class="p">.</span><span class="n">toDate</span><span class="p">()</span>
+</code></pre></div>
+
+<p>It's also possible to represent a date with reduced precision. For example, a <code>YearMonth</code> could be used to represent a credit card expiration date containing just a year and month.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a year-month from a year and month</span>
+<span class="k">val</span> <span class="py">expiration</span> <span class="p">=</span> <span class="n">YearMonth</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+
+<span class="c1">// A year-month can also be built using the &quot;at&quot; operator</span>
+<span class="k">val</span> <span class="py">yearMonth</span><span class="p">:</span> <span class="n">YearMonth</span> <span class="p">=</span> <span class="n">Year</span><span class="p">(</span><span class="m">2020</span><span class="p">)</span> <span class="n">at</span> <span class="n">Month</span><span class="p">.</span><span class="n">AUGUST</span>
+</code></pre></div>
+
+<h2 id="time-of-day">Time of Day</h2>
+<p>The <code>Time</code> class can be used to represent a time of the day in an ambiguous region. Unlike <code>Date</code>, there are no classes with reduced precision -- a <code>Time</code> is always precise to the nanosecond.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get the current time in the local time zone of the system</span>
+<span class="k">val</span> <span class="py">currentTime</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="c1">// Create a time from components</span>
+<span class="k">val</span> <span class="py">time</span> <span class="p">=</span> <span class="n">Time</span><span class="p">(</span><span class="m">13</span><span class="p">,</span> <span class="m">59</span><span class="p">,</span> <span class="m">59</span><span class="p">,</span> <span class="m">999</span><span class="n">_999_999</span><span class="p">)</span>
+
+<span class="c1">// Destructure a time back into components</span>
+<span class="k">val</span> <span class="p">(</span><span class="py">hour</span><span class="p">,</span> <span class="py">minute</span><span class="p">,</span> <span class="py">second</span><span class="p">,</span> <span class="py">nanosecond</span><span class="p">)</span> <span class="p">=</span> <span class="n">time</span>
+</code></pre></div>
+
+<h2 id="combined-date-and-time-of-day">Combined Date and Time of Day</h2>
+<p>A <code>DateTime</code> combines a <code>Date</code> and <code>Time</code>, allowing you to represent both in a single data structure, still in an ambiguous region.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a date-time from individual date and time components</span>
+<span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">JANUARY</span><span class="p">,</span> <span class="m">21</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+
+<span class="c1">// Destructure a date-time</span>
+<span class="k">val</span> <span class="p">(</span><span class="py">date</span><span class="p">,</span> <span class="py">time</span><span class="p">)</span> <span class="p">=</span> <span class="n">dateTime</span>
+
+<span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2019</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">MARCH</span><span class="p">,</span> <span class="m">15</span><span class="p">)</span>
+
+<span class="c1">// The &quot;at&quot; operator can also be used to create a date-time</span>
+<span class="k">val</span> <span class="py">anotherDateTime</span><span class="p">:</span> <span class="n">DateTime</span> <span class="p">=</span> <span class="n">date</span> <span class="n">at</span> <span class="n">Time</span><span class="p">.</span><span class="n">NOON</span>
+
+<span class="c1">// Or you could get the date-time at midnight from a date</span>
+<span class="k">val</span> <span class="py">startOfDay</span><span class="p">:</span> <span class="n">DateTime</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">startOfDay</span>
+</code></pre></div>
+
+<p>There's no guarantee that a particular <code>DateTime</code> will exist in every time zone and it could even exist twice, all thanks to the fun that is daylight savings time. We'll get into that more shortly, but it's important to keep this in mind since constructing or manipulating a <code>DateTime</code> directly can lead to subtle bugs.</p>
+<h2 id="instants-in-time">Instants in Time</h2>
+<p>The classes we've looked at so far model dates and times in an ambiguous region, but often we want to unambiguously capture an instant in time. There are actually three different classes in Island Time that can do this, each serving a different purpose.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Instant</code></td>
+<td>A timestamp</td>
+</tr>
+<tr>
+<td><code>ZonedDateTime</code></td>
+<td>A date and time of day in a particular time zone</td>
+</tr>
+<tr>
+<td><code>OffsetDateTime</code></td>
+<td>A date and time of day with fixed UTC offset</td>
+</tr>
+</tbody>
+</table>
+<p>An <code>Instant</code> is simply a number of seconds and nanoseconds that have elpased since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a> (<code>1970-01-01T00:00Z</code>), ignoring leap seconds. There's no concept of "date" without conversion to one of the other types. Practically speaking, this is the class you should use when you don't care about the local time and just want a <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a> timestamp.</p>
+<div class="highlight"><pre><span></span><code><span class="k">data</span> <span class="k">class</span> <span class="nc">DogDto</span><span class="p">(</span>
+    <span class="k">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="k">val</span> <span class="py">breed</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="c1">// Capture the current system time</span>
+    <span class="k">val</span> <span class="py">creationTime</span><span class="p">:</span> <span class="n">Instant</span> <span class="p">=</span> <span class="n">Instant</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>To capture an instant along with the local time, you have two options -- <code>OffsetDateTime</code> and <code>ZonedDateTime</code>. Both store a date-time with an offset from UTC, however, <code>ZonedDateTime</code> is also aware of time zone rules, which is an important distinction.</p>
+<h3 id="utcoffset-vs-timezone"><code>UtcOffset</code> vs. <code>TimeZone</code></h3>
+<p>In Island Time, a <code>UtcOffset</code> is just a number of seconds that a local time must be adjusted forward or backward by to be equivalent to UTC. A <code>TimeZone</code> defines the rules used to determine the UTC offset. Time zones fall into two categories -- region-based (<code>TimeZone.Region</code>) and fixed offset (<code>TimeZone.FixedOffset</code>).</p>
+<p>Region-based zones have identifiers, such as "America/New_York" or "Europe/London", that correspond to entries in the <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a>.</p>
+<p>Fixed offset zones have a fixed UTC offset. While region-based zones are generally preferrable, a suitable one may not exist in all situations and sometimes you just want a fixed offset.</p>
+<h3 id="zoneddatetime-vs-offsetdatetime"><code>ZonedDateTime</code> vs. <code>OffsetDateTime</code></h3>
+<p>Most platforms nowadays draw their understanding of time zones from the <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a>, but time zones and their rules change all the time and different systems might have different versions of the database or only a subset of it available. This makes persistance and serialization of <code>ZonedDateTime</code> troublesome since there's the possibility that when it gets read later, the zone can't be found or its rules have changed, thus altering the local date and time.</p>
+<p>Using <code>OffsetDateTime</code> guarantees that you won't get an exception and the value you save will be the value that's read later, making it well-suited for this particular use case. More often than not though, you should use <code>ZonedDateTime</code> since it will handle daylight savings transitions correctly when doing calendrical calculations. You just might want to consider converting to an <code>OffsetDateTime</code> when you persist or serialize your data.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">MARCH</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span>
+<span class="k">val</span> <span class="py">time</span> <span class="p">=</span> <span class="n">Time</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">30</span><span class="p">)</span>
+<span class="k">val</span> <span class="py">zone</span> <span class="p">=</span> <span class="n">TimeZone</span><span class="p">(</span><span class="s">&quot;America/New_York&quot;</span><span class="p">)</span>
+
+<span class="c1">// 2:00 on March 8 marks the beginning of daylight savings time on the east</span>
+<span class="c1">// coast of the United States, so 2:30 doesn&#39;t exist. The time is automatically</span>
+<span class="c1">// adjusted by an hour to 3:30.</span>
+<span class="k">val</span> <span class="py">zonedDateTime</span> <span class="p">=</span> <span class="n">date</span> <span class="n">at</span> <span class="n">time</span> <span class="n">at</span> <span class="n">zone</span>
+<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span><span class="p">)</span>
+<span class="c1">// Output: 2020-03-08T03:30-04:00 [America/New_York]</span>
+
+<span class="c1">// If we subtract an hour, the offset will revert to that of standard time</span>
+<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span> <span class="p">-</span> <span class="m">1.</span><span class="n">hours</span><span class="p">)</span>
+<span class="c1">// Output: 2020-03-08T01:30-05:00 [America/New_York]</span>
+
+<span class="c1">// It&#39;s easy to convert a ZonedDateTime to an OffsetDateTime</span>
+<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span><span class="p">.</span><span class="n">asOffsetDateTime</span><span class="p">())</span>
+<span class="c1">// Output: 2020-03-08T03:30-04:00</span>
+
+<span class="c1">// It&#39;s also possible to change the time zone such that it uses a fixed offset</span>
+<span class="c1">// instead of &quot;America/New_York&quot;, making it functionally equivalent to an</span>
+<span class="c1">// OffsetDateTime.</span>
+<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span><span class="p">.</span><span class="n">withFixedOffsetZone</span><span class="p">())</span>
+<span class="c1">// Output: 2020-03-08T03:30-04:00</span>
+
+<span class="c1">// Or change the zone while preserving the captured instant</span>
+<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span><span class="p">.</span><span class="n">adjustedTo</span><span class="p">(</span><span class="n">TimeZone</span><span class="p">(</span><span class="s">&quot;America/Los_Angeles&quot;</span><span class="p">)))</span>
+<span class="c1">// Output: 2020-03-07T23:30-08:00</span>
+</code></pre></div>
+
+<h2 id="patterns-and-operators">Patterns and Operators</h2>
+<p>Throughout Island Time's date-time primitives, you'll find a set of patterns that remain relatively constant as well as a number of operators that simplify common tasks.</p>
+<h3 id="the-at-operator">The <code>at</code> operator</h3>
+<p>The <code>at</code> infix function can be used to build up date-time primitives from "smaller" pieces. For example, we can create a <code>DateTime</code> by combining a <code>Date and a</code>Time`.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="n">at</span> <span class="n">Time</span><span class="p">.</span><span class="n">NOON</span>
+</code></pre></div>
+
+<p>We can then turn that into a <code>ZonedDateTime</code> by combining it with a <code>TimeZone</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">zonedDateTime</span> <span class="p">=</span> <span class="n">dateTime</span> <span class="n">at</span> <span class="n">TimeZone</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="copy"><code>copy()</code></h3>
+<p>Similar to Kotlin's data classes, each date-time primitive has a <code>copy()</code> method available, making it easy to create a copy while changing any number of properties.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">copy</span><span class="p">(</span><span class="n">dayOfMonth</span> <span class="p">=</span> <span class="m">15</span><span class="p">)</span>
+<span class="k">val</span> <span class="py">dateTimeAtMidnight</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">time</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">MIDNIGHT</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="arithmetic">Arithmetic</h3>
+<p>A <a href="../durations/">duration</a> of time can be added or subtracted from a date-time primitive. Which units are supported will vary depending on whether the primitive is date-based, time-based, or both.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">tomorrow</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="p">+</span> <span class="m">1.</span><span class="n">days</span>
+<span class="k">val</span> <span class="py">yesterday</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="p">-</span> <span class="m">1.</span><span class="n">days</span>
+
+<span class="k">val</span> <span class="py">tenSecondsLater</span> <span class="p">=</span> <span class="n">Instant</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="p">+</span> <span class="m">10.</span><span class="n">seconds</span>
+</code></pre></div>
+
+<p>When working with <code>ZonedDateTime</code>, adding a day-based period of time may cross a daylight savings time transition, in which case, adding <code>1.days</code> may not be the same as adding <code>24.hours</code>.</p>
+<h3 id="iso-representation">ISO representation</h3>
+<p>Any date-time primitive can be converted to an appropriate ISO string format by simply calling <code>toString()</code>. To convert a string into a date-time primitive, use the appropriate conversion function, such as <code>String.toDate()</code> or <code>String.toInstant()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">isoString</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">toString</span>
+<span class="k">val</span> <span class="py">dateFromString</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">isoString</span><span class="p">.</span><span class="n">toDate</span><span class="p">()</span>
+</code></pre></div>
+
+<p>By default, Island Time reads and writes using ISO-8601 extended format, which is most common. <a href="../../api/core/io.islandtime.parser/-date-time-parsers/">Predefined parsers</a> are also available that can read the less common basic format -- or both basic and extended.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">basicDateString</span> <span class="p">=</span> <span class="s">&quot;20200305&quot;</span>
+<span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">basicDateString</span><span class="p">.</span><span class="n">toDate</span><span class="p">(</span><span class="n">DateTimeParsers</span><span class="p">.</span><span class="n">Iso</span><span class="p">.</span><span class="n">Basic</span><span class="p">.</span><span class="n">DATE</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="start-and-end-of-time-periods">Start and end of time periods</h3>
+<p>Relative to any date-based primitive, it's possible to get the start or end of a given period, be it the year, month, week, or day.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">startOfYear</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">startOfYear</span>
+<span class="k">val</span> <span class="py">endOfYear</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">endOfYear</span>
+<span class="k">val</span> <span class="py">startOfMonth</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">startOfMonth</span>
+<span class="k">val</span> <span class="py">startOfDay</span><span class="p">:</span> <span class="n">DateTime</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">startOfDay</span>
+</code></pre></div>
+
+<p>When it comes to weeks, we need to consider which day represents the start of the week. According to the ISO standard, that's Monday. However, depending on the locale, that may be on Sunday or Saturday instead. <code>WeekSettings</code> and <code>Locale</code> can be used to provide control over this.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Start of ISO week (Monday start)</span>
+<span class="k">val</span> <span class="py">isoStart</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">startOfWeek</span>
+
+<span class="c1">// Start of week using Sunday as start</span>
+<span class="k">val</span> <span class="py">sundayStart</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">startOfWeek</span><span class="p">(</span><span class="n">WeekSettings</span><span class="p">.</span><span class="n">SUNDAY_START</span><span class="p">)</span>
+
+<span class="c1">// Respect the user&#39;s system settings (usually, most appropriate)</span>
+<span class="k">val</span> <span class="py">systemStart</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">startOfWeek</span><span class="p">(</span><span class="n">WeekSettings</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">())</span>
+
+<span class="c1">// Use the default associated with a particular locale</span>
+<span class="k">val</span> <span class="py">localeStart</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">startOfWeek</span><span class="p">(</span><span class="n">explicitLocale</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="previous-or-next-day-of-week">Previous or next day of week</h3>
+<p>To get, say, the previous Tuesday from a particular date-time, you can do something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">now</span> <span class="p">=</span> <span class="n">ZonedDateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="c1">// Get the Tuesday before &quot;now&quot; at the same time of day</span>
+<span class="k">val</span> <span class="py">nowOnTuesday</span> <span class="p">=</span> <span class="n">now</span><span class="p">.</span><span class="n">previous</span><span class="p">(</span><span class="n">TUESDAY</span><span class="p">)</span>
+
+<span class="c1">// Get the Tuesday before &quot;now&quot; or &quot;now&quot; if it already falls on a Tuesday</span>
+<span class="k">val</span> <span class="py">nowOnTuesdayOrSame</span> <span class="p">=</span> <span class="n">now</span><span class="p">.</span><span class="n">previousOrSame</span><span class="p">(</span><span class="n">TUESDAY</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Similarly, you can use <code>next()</code> or <code>nextOrSame()</code> to get the next day of the week relative to the current date.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">today</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">nextWednesday</span> <span class="p">=</span> <span class="n">today</span><span class="p">.</span><span class="n">next</span><span class="p">(</span><span class="n">WEDNESDAY</span><span class="p">)</span>
+<span class="k">val</span> <span class="py">nextWednesdayOrToday</span> <span class="p">=</span> <span class="n">today</span><span class="p">.</span><span class="n">nextOrSame</span><span class="p">(</span><span class="n">WEDNESDAY</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="rounding">Rounding</h3>
+<p>A time or date-time can be rounded up, down, or half-up to the precision of a particular unit or increment.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="c1">// Output: 2020-06-30T06:32:14.168</span>
+
+<span class="c1">// Round half-up to the nearest minute</span>
+<span class="k">val</span> <span class="py">roundedToMinute</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedTo</span><span class="p">(</span><span class="n">MINUTES</span><span class="p">)</span>
+<span class="c1">// Output: 2020-06-30T06:32</span>
+
+<span class="c1">// Round half-up to the nearest 15 minutes</span>
+<span class="k">val</span> <span class="py">roundedToNearest15Mins</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedToNearest</span><span class="p">(</span><span class="m">15.</span><span class="n">minutes</span><span class="p">)</span>
+<span class="c1">// Output: 2020-06-30T06:30</span>
+
+<span class="c1">// Round up to the nearest hour</span>
+<span class="k">val</span> <span class="py">roundedUpToHour</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedUpTo</span><span class="p">(</span><span class="n">HOURS</span><span class="p">)</span>
+<span class="c1">// Output: 2020-06-30T07:00</span>
+
+<span class="c1">// Round down to the nearest hour</span>
+<span class="k">val</span> <span class="py">roundedDownToHour</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">truncatedTo</span><span class="p">(</span><span class="n">HOURS</span><span class="p">)</span>
+<span class="c1">// Output: 2020-06-30T06:00</span>
+
+<span class="c1">// Round down to the nearest 100 milliseconds</span>
+<span class="k">val</span> <span class="py">roundedDownTo100Millis</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedDownToNearest</span><span class="p">(</span><span class="m">100.</span><span class="n">milliseconds</span><span class="p">)</span>
+<span class="c1">// Output: 2020-06-30T06:32:14.1</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+    
+    <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+            
+            <a href="../general-design/" title="General Design" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+                </div>
+                <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                General Design
+              </span>
+                </div>
+            </a>
+            
+            
+            <a href="../durations/" title="Durations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+                <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Durations
+              </span>
+                </div>
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+                </div>
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; 2020 Erik Christensen
+                </div>
+                
+                powered by
+                <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs</a>
+                | Icons made by
+                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+                from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

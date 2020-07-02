@@ -1,0 +1,6 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+
+io.islandtime.extensions.serialization
+io.islandtime.extensions.serialization.measures
+io.islandtime.extensions.serialization.ranges

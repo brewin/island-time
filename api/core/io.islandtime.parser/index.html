@@ -1,0 +1,865 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
+      
+      
+        <link rel="canonical" href="https://erikc5000.github.io/island-time/api/core/io.islandtime.parser/">
+      
+      
+        <meta name="author" content="Erik Christensen">
+      
+      <link rel="shortcut icon" href="../../../images/logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Index - Island Time</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#package-ioislandtimeparser" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+      
+  <img src="../../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Island Time
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/erikc5000/island-time/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    island-time
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+      
+  <img src="../../../images/logo.svg" alt="logo">
+
+    </a>
+    Island Time
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/erikc5000/island-time/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    island-time
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      The Basics
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="The Basics" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        The Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../basics/general-design/" title="General Design" class="md-nav__link">
+      General Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../basics/dates-and-times/" title="Dates and Times" class="md-nav__link">
+      Dates and Times
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../basics/durations/" title="Durations" class="md-nav__link">
+      Durations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
+      Time Intervals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../basics/interop/" title="Interop" class="md-nav__link">
+      Interop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced Topics
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Advanced Topics" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Advanced Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../advanced/custom-providers/" title="Custom Providers" class="md-nav__link">
+      Custom Providers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Extensions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Extensions" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../extensions/serialization/" title="Serialization" class="md-nav__link">
+      Serialization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../extensions/parcelize/" title="Parcelize" class="md-nav__link">
+      Parcelize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../extensions/threetenabp/" title="ThreeTen Android Backport" class="md-nav__link">
+      ThreeTen Android Backport
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="core" class="md-nav__link">
+      core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parcelize/" title="parcelize-extensions" class="md-nav__link">
+      parcelize-extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../serialization/" title="serialization-extensions" class="md-nav__link">
+      serialization-extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../threetenabp/" title="threetenabp-extensions" class="md-nav__link">
+      threetenabp-extensions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#package-ioislandtimeparser" class="md-nav__link">
+    Package io.islandtime.parser
+  </a>
+  
+    <nav class="md-nav" aria-label="Package io.islandtime.parser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/erikc5000/island-time/edit/master/docs/api/core/io.islandtime.parser/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Index</h1>
+                
+                <p><a href="../">core</a> / <a href="./">io.islandtime.parser</a></p>
+<h2 id="package-ioislandtimeparser">Package io.islandtime.parser</h2>
+<p>A set of predefined parsers that can be used to convert strings in various ISO formats into date-time primitives, along with a parsing engine that provides the ability to define custom parsers.</p>
+<h3 id="types">Types</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parse-exception/">DateTimeParseException</a></td>
+<td><code>class DateTimeParseException :</code><a href="../io.islandtime/-date-time-exception/"><code>DateTimeException</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parser/">DateTimeParser</a></td>
+<td>A parser that converts text into a collection of date-time fields that are understood throughout Island Time.<code>abstract class DateTimeParser</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parser-builder/">DateTimeParserBuilder</a></td>
+<td><code>interface DateTimeParserBuilder</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parse-result/">DateTimeParseResult</a></td>
+<td>The result of a parsing operation.<code>data class DateTimeParseResult</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parsers/">DateTimeParsers</a></td>
+<td>A set of predefined parsers.<code>object DateTimeParsers</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parser-settings/">DateTimeParserSettings</a></td>
+<td>Settings that control the parsing behavior.<code>data class DateTimeParserSettings</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-decimal-number-parser-builder/">DecimalNumberParserBuilder</a></td>
+<td><code>interface DecimalNumberParserBuilder :</code><a href="-number-parser-builder/"><code>NumberParserBuilder</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-grouped-date-time-parser/">GroupedDateTimeParser</a></td>
+<td><code>class GroupedDateTimeParser</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-grouped-date-time-parser-builder/">GroupedDateTimeParserBuilder</a></td>
+<td><code>interface GroupedDateTimeParserBuilder</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-literal-parser-builder/">LiteralParserBuilder</a></td>
+<td><code>interface LiteralParserBuilder</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-number-parser-builder/">NumberParserBuilder</a></td>
+<td><code>interface NumberParserBuilder</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-sign-parser-builder/">SignParserBuilder</a></td>
+<td><code>interface SignParserBuilder</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-sign-style/">SignStyle</a></td>
+<td><code>enum class SignStyle</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-string-parse-action/">StringParseAction</a></td>
+<td><code>enum class StringParseAction</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-string-parser-builder/">StringParserBuilder</a></td>
+<td><code>interface StringParserBuilder</code></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-whole-number-parser-builder/">WholeNumberParserBuilder</a></td>
+<td><code>interface WholeNumberParserBuilder :</code><a href="-number-parser-builder/"><code>NumberParserBuilder</code></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotations">Annotations</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-date-time-parser-dsl/">DateTimeParserDsl</a></td>
+<td><code>annotation class DateTimeParserDsl</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="functions">Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="am-pm/">amPm</a></td>
+<td>Parse the AM or PM of the day from its textual representation.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.amPm():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="date-time-parser/">dateTimeParser</a></td>
+<td>Define a custom <a href="-date-time-parser/#io.islandtime.parser.DateTimeParser">DateTimeParser</a>.<code>fun dateTimeParser(builder:</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>):</code><a href="-date-time-parser/"><code>DateTimeParser</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="day-of-month/">dayOfMonth</a></td>
+<td>Parse a day of the month value with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.dayOfMonth(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a day of the month value with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.dayOfMonth(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="day-of-week-number/">dayOfWeekNumber</a></td>
+<td>Parse a day of week number with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.dayOfWeekNumber(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 1, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="day-of-year/">dayOfYear</a></td>
+<td>Parse a day of the year value with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.dayOfYear(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a day of the year value with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.dayOfYear(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="duration-of-fractional-seconds/">durationOfFractionalSeconds</a></td>
+<td>Parse a duration of fractional seconds.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.durationOfFractionalSeconds(wholeLength:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, fractionLength:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 0..9, fractionScale:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 9, builder:</code><a href="-decimal-number-parser-builder/"><code>DecimalNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="duration-of-hours/">durationOfHours</a></td>
+<td>Parse a duration of whole hours.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.durationOfHours(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="duration-of-minutes/">durationOfMinutes</a></td>
+<td>Parse a duration of whole minutes.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.durationOfMinutes(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="duration-of-seconds/">durationOfSeconds</a></td>
+<td>Parse a duration of whole seconds.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.durationOfSeconds(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="era/">era</a></td>
+<td>Parse an era from its textual representation in any of the specified styles.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.era(styles:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="../io.islandtime.format/-text-style/"><code>TextStyle</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse an era from its textual representation in a specific style.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.era(style:</code><a href="../io.islandtime.format/-text-style/"><code>TextStyle</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="fractional-second-of-minute/">fractionalSecondOfMinute</a></td>
+<td>Parse a fractional second of the minute.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.fractionalSecondOfMinute(wholeLength:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..2, fractionLength:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 0..9, fractionScale:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 9, builder:</code><a href="-decimal-number-parser-builder/"><code>DecimalNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a fractional second of the minute with a fixed number of characters representing the whole second.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.fractionalSecondOfMinute(wholeLength:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, fractionLength:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 0..9, fractionScale:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>= 9, builder:</code><a href="-decimal-number-parser-builder/"><code>DecimalNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="grouped-date-time-parser/">groupedDateTimeParser</a></td>
+<td>Create a <a href="-grouped-date-time-parser/#io.islandtime.parser.GroupedDateTimeParser">GroupedDateTimeParser</a>.<code>fun groupedDateTimeParser(builder:</code><a href="-grouped-date-time-parser-builder/"><code>GroupedDateTimeParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>):</code><a href="-grouped-date-time-parser/"><code>GroupedDateTimeParser</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="hour-of-day/">hourOfDay</a></td>
+<td>Parse an hour of the day with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.hourOfDay(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..2, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse an hour of the day with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.hourOfDay(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="localized-day-of-week/">localizedDayOfWeek</a></td>
+<td>Parse a day of the week from its textual representation in any of the specified styles.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.localizedDayOfWeek(styles:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="../io.islandtime.format/-text-style/"><code>TextStyle</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a day of the week from its textual representation in a specific style.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.localizedDayOfWeek(style:</code><a href="../io.islandtime.format/-text-style/"><code>TextStyle</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="localized-month/">localizedMonth</a></td>
+<td>Parse a month from its textual representation in any of the specified styles.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.localizedMonth(styles:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="../io.islandtime.format/-text-style/"><code>TextStyle</code></a><code>&gt;):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a month from its textual representation in a specific style.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.localizedMonth(style:</code><a href="../io.islandtime.format/-text-style/"><code>TextStyle</code></a><code>):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="minute-of-hour/">minuteOfHour</a></td>
+<td>Parse a minute of the hour with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.minuteOfHour(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..2, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a minute of the hour with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.minuteOfHour(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="month-number/">monthNumber</a></td>
+<td>Parse a month of year value with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.monthNumber(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a month of year number with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.monthNumber(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="period-of-days/">periodOfDays</a></td>
+<td>Parse a period of whole days.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.periodOfDays(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..10, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="period-of-months/">periodOfMonths</a></td>
+<td>Parse a period of whole months.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.periodOfMonths(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..10, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="period-of-weeks/">periodOfWeeks</a></td>
+<td>Parse a period of whole weeks.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.periodOfWeeks(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..10, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="period-of-years/">periodOfYears</a></td>
+<td>Parse a period of whole years.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.periodOfYears(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..10, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="period-sign/">periodSign</a></td>
+<td>Parses a number's sign and populates <a href="../io.islandtime.base/-date-time-field/-p-e-r-i-o-d_-s-i-g-n/#io.islandtime.base.DateTimeField.PERIOD_SIGN">DateTimeField.PERIOD_SIGN</a> with <code>-1L</code>, if negative or <code>1L</code>, if positive.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.periodSign():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="second-of-minute/">secondOfMinute</a></td>
+<td>Parse a second of the minute with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.secondOfMinute(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..2, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a second of the minute with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.secondOfMinute(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="time-zone-id/">timeZoneId</a></td>
+<td>Parse a time zone region ID.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.timeZoneId():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="unbounded-designator/">unboundedDesignator</a></td>
+<td>Parses the string ".." and populates <a href="../io.islandtime.base/-date-time-field/-i-s_-u-n-b-o-u-n-d-e-d/#io.islandtime.base.DateTimeField.IS_UNBOUNDED">DateTimeField.IS_UNBOUNDED</a> with <code>1L</code>.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.unboundedDesignator():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="utc-designator/">utcDesignator</a></td>
+<td>Parses the character 'Z' and populates <a href="../io.islandtime.base/-date-time-field/-u-t-c_-o-f-f-s-e-t_-t-o-t-a-l_-s-e-c-o-n-d-s/#io.islandtime.base.DateTimeField.UTC_OFFSET_TOTAL_SECONDS">DateTimeField.UTC_OFFSET_TOTAL_SECONDS</a> with <code>0L</code>.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.utcDesignator():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="utc-offset-hours/">utcOffsetHours</a></td>
+<td><code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.utcOffsetHours(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="utc-offset-minutes/">utcOffsetMinutes</a></td>
+<td><code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.utcOffsetMinutes(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="utc-offset-seconds/">utcOffsetSeconds</a></td>
+<td><code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.utcOffsetSeconds(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="utc-offset-sign/">utcOffsetSign</a></td>
+<td>Parses a number's sign and populates <a href="../io.islandtime.base/-date-time-field/-u-t-c_-o-f-f-s-e-t_-s-i-g-n/#io.islandtime.base.DateTimeField.UTC_OFFSET_SIGN">DateTimeField.UTC_OFFSET_SIGN</a> with <code>-1L</code>, if negative or <code>1L</code>, if positive.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.utcOffsetSign():</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="year/">year</a></td>
+<td>Parse a year with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.year(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a year with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.year(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="year-of-era/">yearOfEra</a></td>
+<td>Parse a year of era with a variable number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.yearOfEra(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><code>IntRange</code></a><code>= 1..19, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><br>Parse a year of era with a fixed number of digits.<code>fun</code><a href="-date-time-parser-builder/"><code>DateTimeParserBuilder</code></a><code>.yearOfEra(length:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><code>Int</code></a><code>, builder:</code><a href="-whole-number-parser-builder/"><code>WholeNumberParserBuilder</code></a><code>.() -&gt;</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a><code>= {}):</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><code>Unit</code></a></td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+    
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; 2020 Erik Christensen
+                </div>
+                
+                powered by
+                <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs</a>
+                | Icons made by
+                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+                from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
