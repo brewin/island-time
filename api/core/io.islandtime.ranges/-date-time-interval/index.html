@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/api/core/io.islandtime.ranges/-date-time-interval/">
+        <link rel="canonical" href="https://islandtime.io/api/core/io.islandtime.ranges/-date-time-interval/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -577,13 +589,11 @@
                 
                 
                 <p><a href="../../">core</a> / <a href="../">io.islandtime.ranges</a> / <a href="./">DateTimeInterval</a></p>
-<h1 id="datetimeinterval">DateTimeInterval</h1>
+<h1 id="datetimeinterval">DateTimeInterval<a class="headerlink" href="#datetimeinterval" title="Permanent link">&para;</a></h1>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>class DateTimeInterval :</code><a href="../-time-interval/"><code>TimeInterval</code></a><code>&lt;</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a><code>&gt;</code></p>
-<p>An interval between two arbitrary date-times.</p>
-<p>As no UTC offset or time zone is associated with either date-time, it's up to the application to interpret the
-meaning.</p>
+<p>An interval between two date-times, assumed to be at the same offset from UTC.</p>
 <p><a href="../../io.islandtime/-date-time/-m-i-n/#io.islandtime.DateTime.Companion$MIN">DateTime.MIN</a> and <a href="../../io.islandtime/-date-time/-m-a-x/#io.islandtime.DateTime.Companion$MAX">DateTime.MAX</a> are used as sentinels to indicate an unbounded (ie. infinite) start or end.</p>
-<h3 id="constructors">Constructors</h3>
+<h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -594,11 +604,11 @@ meaning.</p>
 <tbody>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-init-/">&lt;init&gt;</a></td>
-<td>An interval between two arbitrary date-times.<code>&lt;init&gt;(start:</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a><code>= UNBOUNDED.start, endExclusive:</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a><code>= UNBOUNDED.endExclusive)</code></td>
+<td>An interval between two date-times, assumed to be at the same offset from UTC.<code>&lt;init&gt;(start:</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a><code>= UNBOUNDED.start, endExclusive:</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a><code>= UNBOUNDED.endExclusive)</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="properties">Properties</h3>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -657,7 +667,7 @@ meaning.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="functions">Functions</h3>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -704,7 +714,7 @@ meaning.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="companion-object-properties">Companion Object Properties</h3>
+<h3 id="companion-object-properties">Companion Object Properties<a class="headerlink" href="#companion-object-properties" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -723,7 +733,7 @@ meaning.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="extension-functions">Extension Functions</h3>
+<h3 id="extension-functions">Extension Functions<a class="headerlink" href="#extension-functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>

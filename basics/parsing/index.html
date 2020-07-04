@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/parsing/">
+        <link rel="canonical" href="https://islandtime.io/basics/parsing/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -277,8 +277,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
+    <a href="../intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../interop/" title="Interop" class="md-nav__link">
+      Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../formatting/" title="Formatting" class="md-nav__link">
+      Formatting
     </a>
   </li>
 
@@ -341,18 +365,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../interop/" title="Interop" class="md-nav__link">
-      Interop
-    </a>
   </li>
 
         
@@ -606,10 +618,48 @@
                   
                 
                 
-                <h1 id="parsing">Parsing</h1>
-<h2 id="predefined-parsers">Predefined Parsers</h2>
+                <h1 id="parsing">Parsing<a class="headerlink" href="#parsing" title="Permanent link">&para;</a></h1>
+<h2 id="predefined-parsers">Predefined Parsers<a class="headerlink" href="#predefined-parsers" title="Permanent link">&para;</a></h2>
 <p>Out of the box, Island Time can parse the most common ISO-8601 formats for dates, times, durations, and time intervals. The set of included parsers can be found in <a href="../../api/core/io.islandtime.parser/-date-time-parsers/"><code>DateTimeParsers</code></a>.</p>
-<h2 id="custom-parsers">Custom Parsers</h2>
+<p>The table below illustrates how the parsers for the various ISO formats are organized within <code>DateTimeParsers</code>, using the calendar date format as an example:</p>
+<table>
+<thead>
+<tr>
+<th>Iso Format</th>
+<th>Parser</th>
+<th>Acceptable Input(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td><code>DateTimeParsers.Basic.CALENDAR_DATE</code></td>
+<td><code>20200101</code></td>
+</tr>
+<tr>
+<td>Extended</td>
+<td><code>DateTimeParsers.Extended.CALENDAR_DATE</code></td>
+<td><code>2020-01-01</code></td>
+</tr>
+<tr>
+<td>Any</td>
+<td><code>DateTimeParsers.CALENDAR_DATE</code></td>
+<td><code>20200101</code> or <code>2020-01-01</code></td>
+</tr>
+</tbody>
+</table>
+<p>The extended format is &mdash; by far &mdash; the most common. If you don't specify a parser explicitly when converting a string to an Island Time type, it will look for extended format only. Below are some examples:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Parse an extended format date-time</span>
+<span class="k">val</span> <span class="py">extendedDateTime</span> <span class="p">=</span> <span class="s">&quot;2020-12-31T13:45&quot;</span><span class="p">.</span><span class="n">toDateTime</span><span class="p">()</span>
+
+<span class="c1">// Parse a basic format date-time</span>
+<span class="k">val</span> <span class="py">basicDateTime</span> <span class="p">=</span> <span class="s">&quot;20201231T1345&quot;</span><span class="p">.</span><span class="n">toDateTime</span><span class="p">(</span><span class="n">DateTimeParsers</span><span class="p">.</span><span class="n">Basic</span><span class="p">.</span><span class="n">DATE_TIME</span><span class="p">)</span>
+
+<span class="c1">// Parse an ordinal date (year and day of year)</span>
+<span class="k">val</span> <span class="py">ordinalDate</span> <span class="p">=</span> <span class="s">&quot;2020-365&quot;</span><span class="p">.</span><span class="n">toDate</span><span class="p">(</span><span class="n">DateTimeParsers</span><span class="p">.</span><span class="n">Extended</span><span class="p">.</span><span class="n">ORDINAL_DATE</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="custom-parsers">Custom Parsers<a class="headerlink" href="#custom-parsers" title="Permanent link">&para;</a></h2>
 <p>In an ideal world, non-ISO formats wouldn’t exist, but sometimes they do and you need to parse them. To support that, you can define custom parsers using a DSL.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Define a custom parser</span>
 <span class="k">val</span> <span class="py">customParser</span> <span class="p">=</span> <span class="n">dateTimeParser</span> <span class="p">{</span>
@@ -661,7 +711,7 @@
     <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
             
-            <a href="../time-intervals/" title="Time Intervals" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../formatting/" title="Formatting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
                 <div class="md-flex__cell md-flex__cell--shrink">
                     <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
                 </div>
@@ -670,19 +720,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Time Intervals
+                Formatting
               </span>
                 </div>
             </a>
             
             
-            <a href="../interop/" title="Interop" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../../advanced/custom-providers/" title="Custom Providers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Interop
+                Custom Providers
               </span>
                 </div>
                 <div class="md-flex__cell md-flex__cell--shrink">

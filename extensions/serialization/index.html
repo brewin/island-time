@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/extensions/serialization/">
+        <link rel="canonical" href="https://islandtime.io/extensions/serialization/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -620,9 +632,9 @@
                   
                 
                 
-                <h1 id="serialization">Serialization</h1>
+                <h1 id="serialization">Serialization<a class="headerlink" href="#serialization" title="Permanent link">&para;</a></h1>
 <p>Island Time provides an artifact containing custom serializers for use with <a href="https://github.com/Kotlin/kotlinx.serialization">Kotlin Serialization</a>. These can be used to convert dates, times, durations, and intervals into ISO-compatible strings, which work well with JSON.</p>
-<h2 id="gradle-setup">Gradle Setup</h2>
+<h2 id="gradle-setup">Gradle Setup<a class="headerlink" href="#gradle-setup" title="Permanent link">&para;</a></h2>
 <p>Add the following dependency to your project's Gradle script:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Groovy</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
@@ -643,7 +655,7 @@
 <p class="admonition-title">Note</p>
 <p>Island Time publishes Gradle Module Metadata for all multiplatform artifacts. The listed "common" artifacts may be used in the dependency block of any target, common or platform-specific.</p>
 </div>
-<h2 id="serializing-to-json">Serializing to JSON</h2>
+<h2 id="serializing-to-json">Serializing to JSON<a class="headerlink" href="#serializing-to-json" title="Permanent link">&para;</a></h2>
 <p>For example purposes, let's assume we have a data structure describing an event that we'd like to serialize.</p>
 <div class="highlight"><pre><span></span><code><span class="n">@Serializable</span>
 <span class="k">data</span> <span class="k">class</span> <span class="nc">EventDto</span><span class="p">(</span>
@@ -670,7 +682,7 @@
 </code></pre></div>
 
 <p>For more information on how to use Kotlin Serialization, consult the <a href="https://github.com/Kotlin/kotlinx.serialization">GitHub page</a>.</p>
-<h2 id="binary-formats">Binary Formats</h2>
+<h2 id="binary-formats">Binary Formats<a class="headerlink" href="#binary-formats" title="Permanent link">&para;</a></h2>
 <p>At the present time, there are no serializers tuned specifically for binary formats. If you have a use case that requires that, feel free to raise an <a href="https://github.com/erikc5000/island-time/issues">issue</a>.</p>
                 
               

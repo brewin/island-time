@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/api/core/io.islandtime.ranges/random/">
+        <link rel="canonical" href="https://islandtime.io/api/core/io.islandtime.ranges/random/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -647,45 +659,45 @@
                 
                 
                 <p><a href="../../">core</a> / <a href="../">io.islandtime.ranges</a> / <a href="./">random</a></p>
-<h1 id="random">random</h1>
+<h1 id="random">random<a class="headerlink" href="#random" title="Permanent link">&para;</a></h1>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-range/"><code>DateRange</code></a><code>.random():</code><a href="../../io.islandtime/-date/"><code>Date</code></a></p>
 <p>Return a random date within the range using the default random number generator.</p>
-<h3 id="exceptions">Exceptions</h3>
+<h3 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the range is empty</p>
 <p><code>UnsupportedOperationException</code> - if the range is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.DateRange)">DateRange.randomOrNull</a></p>
 <p>(iosArm64, iosX64, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-range/"><code>DateRange</code></a><code>.random(random: &lt;ERROR CLASS&gt;):</code><a href="../../io.islandtime/-date/"><code>Date</code></a></p>
 <p>Return a random date within the range using the supplied random number generator.</p>
-<h3 id="exceptions_1">Exceptions</h3>
+<h3 id="exceptions_1">Exceptions<a class="headerlink" href="#exceptions_1" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the range is empty</p>
 <p><code>UnsupportedOperationException</code> - if the range is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.DateRange)">DateRange.randomOrNull</a></p>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-time-interval/"><code>DateTimeInterval</code></a><code>.random():</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a></p>
 <p>Return a random date-time within the interval using the default random number generator.</p>
-<h3 id="exceptions_2">Exceptions</h3>
+<h3 id="exceptions_2">Exceptions<a class="headerlink" href="#exceptions_2" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.DateTimeInterval)">DateTimeInterval.randomOrNull</a></p>
 <p>(iosArm64, iosX64, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-time-interval/"><code>DateTimeInterval</code></a><code>.random(random: &lt;ERROR CLASS&gt;):</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a></p>
 <p>Return a random date-time within the interval using the supplied random number generator.</p>
-<h3 id="exceptions_3">Exceptions</h3>
+<h3 id="exceptions_3">Exceptions<a class="headerlink" href="#exceptions_3" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.DateTimeInterval)">DateTimeInterval.randomOrNull</a></p>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-instant-interval/"><code>InstantInterval</code></a><code>.random():</code><a href="../../io.islandtime/-instant/"><code>Instant</code></a></p>
 <p>Return a random instant within the interval using the default random number generator.</p>
-<h3 id="exceptions_4">Exceptions</h3>
+<h3 id="exceptions_4">Exceptions<a class="headerlink" href="#exceptions_4" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="#">InstantInterval.randomOrNull</a></p>
 <p>(iosArm64, iosX64, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-instant-interval/"><code>InstantInterval</code></a><code>.random(random: &lt;ERROR CLASS&gt;):</code><a href="../../io.islandtime/-instant/"><code>Instant</code></a></p>
 <p>Return a random instant within the interval using the supplied random number generator.</p>
-<h3 id="exceptions_5">Exceptions</h3>
+<h3 id="exceptions_5">Exceptions<a class="headerlink" href="#exceptions_5" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
@@ -693,7 +705,7 @@
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-offset-date-time-interval/"><code>OffsetDateTimeInterval</code></a><code>.random():</code><a href="../../io.islandtime/-offset-date-time/"><code>OffsetDateTime</code></a></p>
 <p>Return a random date-time within the interval using the default random number generator. The offset of the start
 date-time will be used.</p>
-<h3 id="exceptions_6">Exceptions</h3>
+<h3 id="exceptions_6">Exceptions<a class="headerlink" href="#exceptions_6" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
@@ -701,7 +713,7 @@ date-time will be used.</p>
 <p>(iosArm64, iosX64, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-offset-date-time-interval/"><code>OffsetDateTimeInterval</code></a><code>.random(random: &lt;ERROR CLASS&gt;):</code><a href="../../io.islandtime/-offset-date-time/"><code>OffsetDateTime</code></a></p>
 <p>Return a random date-time within the interval using the supplied random number generator. The offset of the start
 date-time will be used.</p>
-<h3 id="exceptions_7">Exceptions</h3>
+<h3 id="exceptions_7">Exceptions<a class="headerlink" href="#exceptions_7" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
@@ -709,7 +721,7 @@ date-time will be used.</p>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-zoned-date-time-interval/"><code>ZonedDateTimeInterval</code></a><code>.random():</code><a href="../../io.islandtime/-zoned-date-time/"><code>ZonedDateTime</code></a></p>
 <p>Return a random date-time within the interval using the default random number generator. The zone of the start
 date-time will be used.</p>
-<h3 id="exceptions_8">Exceptions</h3>
+<h3 id="exceptions_8">Exceptions<a class="headerlink" href="#exceptions_8" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
@@ -717,28 +729,28 @@ date-time will be used.</p>
 <p>(iosArm64, iosX64, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-zoned-date-time-interval/"><code>ZonedDateTimeInterval</code></a><code>.random(random: &lt;ERROR CLASS&gt;):</code><a href="../../io.islandtime/-zoned-date-time/"><code>ZonedDateTime</code></a></p>
 <p>Return a random date-time within the interval using the supplied random number generator. The zone of the start
 date-time will be used.</p>
-<h3 id="exceptions_9">Exceptions</h3>
+<h3 id="exceptions_9">Exceptions<a class="headerlink" href="#exceptions_9" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.ZonedDateTimeInterval)">ZonedDateTimeInterval.randomOrNull</a></p>
 <p>(jvm) <code>fun</code><a href="../-date-range/"><code>DateRange</code></a><code>.random(random:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><code>Random</code></a><code>):</code><a href="../../io.islandtime/-date/"><code>Date</code></a></p>
 <p>Return a random date within the range using the supplied random number generator.</p>
-<h3 id="exceptions_10">Exceptions</h3>
+<h3 id="exceptions_10">Exceptions<a class="headerlink" href="#exceptions_10" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the range is empty</p>
 <p><code>UnsupportedOperationException</code> - if the range is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.DateRange)">DateRange.randomOrNull</a></p>
 <p>(jvm) <code>fun</code><a href="../-date-time-interval/"><code>DateTimeInterval</code></a><code>.random(random:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><code>Random</code></a><code>):</code><a href="../../io.islandtime/-date-time/"><code>DateTime</code></a></p>
 <p>Return a random date-time within the interval using the supplied random number generator.</p>
-<h3 id="exceptions_11">Exceptions</h3>
+<h3 id="exceptions_11">Exceptions<a class="headerlink" href="#exceptions_11" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
 <p><a href="../random-or-null/#io.islandtime.ranges$randomOrNull(io.islandtime.ranges.DateTimeInterval)">DateTimeInterval.randomOrNull</a></p>
 <p>(jvm) <code>fun</code><a href="../-instant-interval/"><code>InstantInterval</code></a><code>.random(random:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><code>Random</code></a><code>):</code><a href="../../io.islandtime/-instant/"><code>Instant</code></a></p>
 <p>Return a random instant within the interval using the supplied random number generator.</p>
-<h3 id="exceptions_12">Exceptions</h3>
+<h3 id="exceptions_12">Exceptions<a class="headerlink" href="#exceptions_12" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
@@ -746,7 +758,7 @@ date-time will be used.</p>
 <p>(jvm) <code>fun</code><a href="../-offset-date-time-interval/"><code>OffsetDateTimeInterval</code></a><code>.random(random:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><code>Random</code></a><code>):</code><a href="../../io.islandtime/-offset-date-time/"><code>OffsetDateTime</code></a></p>
 <p>Return a random date-time within the interval using the supplied random number generator. The offset of the start
 date-time will be used.</p>
-<h3 id="exceptions_13">Exceptions</h3>
+<h3 id="exceptions_13">Exceptions<a class="headerlink" href="#exceptions_13" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>
@@ -754,7 +766,7 @@ date-time will be used.</p>
 <p>(jvm) <code>fun</code><a href="../-zoned-date-time-interval/"><code>ZonedDateTimeInterval</code></a><code>.random(random:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><code>Random</code></a><code>):</code><a href="../../io.islandtime/-zoned-date-time/"><code>ZonedDateTime</code></a></p>
 <p>Return a random date-time within the interval using the supplied random number generator. The zone of the start
 date-time will be used.</p>
-<h3 id="exceptions_14">Exceptions</h3>
+<h3 id="exceptions_14">Exceptions<a class="headerlink" href="#exceptions_14" title="Permanent link">&para;</a></h3>
 <p><code>NoSuchElementException</code> - if the interval is empty</p>
 <p><code>UnsupportedOperationException</code> - if the interval is unbounded</p>
 <p><strong>See Also</strong></p>

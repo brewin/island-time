@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/durations/">
+        <link rel="canonical" href="https://islandtime.io/basics/durations/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -340,20 +340,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -366,6 +354,30 @@
   <li class="md-nav__item">
     <a href="../interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -634,10 +646,10 @@
                   
                 
                 
-                <h1 id="durations">Durations</h1>
+                <h1 id="durations">Durations<a class="headerlink" href="#durations" title="Permanent link">&para;</a></h1>
 <p>In Island Time, durations are fully type-safe. The use of durations in terms of a single unit is encouraged where possible. Date-based periods in terms of multiple units and long time-based durations are also available.</p>
-<h2 id="single-unit-durations">Single Unit Durations</h2>
-<p>Island Time provides <a href="https://kotlinlang.org/docs/reference/inline-classes.html">inline classes</a> representing each individual duration unit, backed by either a <code>Long</code> or <code>Int</code> -- such as <code>IntYears</code>, <code>IntHours</code>, or <code>LongNanoseconds</code>. This allows the precision of each quantity to be maintained, avoids ambiguitity regarding the meaning of a day (ie. conceptual vs. 24 hours), and is quite efficient as well. When adding or subtracting quantities in mixed units, precision is increased automatically as needed. For example:</p>
+<h2 id="single-unit-durations">Single Unit Durations<a class="headerlink" href="#single-unit-durations" title="Permanent link">&para;</a></h2>
+<p>Island Time provides <a href="https://kotlinlang.org/docs/reference/inline-classes.html">inline classes</a> representing each individual duration unit, backed by either a <code>Long</code> or <code>Int</code> &mdash; such as <code>IntYears</code>, <code>IntHours</code>, or <code>LongNanoseconds</code>. This allows the precision of each quantity to be maintained, avoids ambiguitity regarding the meaning of a day (ie. conceptual vs. 24 hours), and is quite efficient as well. When adding or subtracting quantities in mixed units, precision is increased automatically as needed. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// The minimum necessary unit granularity is preserved when</span>
 <span class="c1">// combining different units</span>
 <span class="k">val</span> <span class="py">totalSeconds</span><span class="p">:</span> <span class="n">IntSeconds</span> <span class="p">=</span> <span class="m">5.</span><span class="n">hours</span> <span class="p">+</span> <span class="m">30.</span><span class="n">minutes</span> <span class="p">+</span> <span class="m">1.</span><span class="n">seconds</span>
@@ -654,7 +666,7 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Or converted to another unit:</p>
+<p>Or converted to another unit.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">hours</span><span class="p">:</span> <span class="n">IntHours</span> <span class="p">=</span> <span class="m">60.</span><span class="n">minutes</span><span class="p">.</span><span class="n">inHours</span>
 </code></pre></div>
 
@@ -663,8 +675,8 @@
 <span class="k">val</span> <span class="py">absHours</span> <span class="p">=</span> <span class="n">hours</span><span class="p">.</span><span class="n">absoluteValue</span> <span class="c1">// hours may be negative</span>
 </code></pre></div>
 
-<h2 id="duration"><code>Duration</code></h2>
-<p>The <code>Duration</code> class can be used to represent time-based durations that are potentially very large at nanosecond precision. In most cases, it's probably unnecessary and single unit durations will be perfectly satisfactory, but you can be assured that overflow won't happen when expressing any duration that fits within the supported time scale.</p>
+<h2 id="duration"><code>Duration</code><a class="headerlink" href="#duration" title="Permanent link">&para;</a></h2>
+<p>The <a href="../../api/core/io.islandtime.measures/-duration/"><code>Duration</code></a> class can be used to represent time-based durations that are potentially very large at nanosecond precision. In most cases, it's probably unnecessary and single unit durations will be perfectly satisfactory, but you can be assured that overflow won't happen when expressing any duration that fits within the supported time scale.</p>
 <p>A single unit duration can be converted to a <code>Duration</code> like so:</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">duration</span><span class="p">:</span> <span class="n">Duration</span> <span class="p">=</span> <span class="m">5.</span><span class="n">seconds</span><span class="p">.</span><span class="n">asDuration</span><span class="p">()</span>
 </code></pre></div>
@@ -678,8 +690,8 @@
 <span class="k">val</span> <span class="py">minutes</span><span class="p">:</span> <span class="n">LongMinutes</span> <span class="p">=</span> <span class="n">duration</span><span class="p">.</span><span class="n">inMinutes</span>
 </code></pre></div>
 
-<h2 id="period"><code>Period</code></h2>
-<p>A <code>Period</code> is a date-based measurement of time consisting of a number of years, months, and days. The code below shows some of things that you can do with it.</p>
+<h2 id="period"><code>Period</code><a class="headerlink" href="#period" title="Permanent link">&para;</a></h2>
+<p>A <a href="../../api/core/io.islandtime.measures/-period/"><code>Period</code></a> is a date-based measurement of time consisting of a number of years, months, and days. The code below shows some of things that you can do with it.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">period</span><span class="p">:</span> <span class="n">Period</span> <span class="p">=</span> <span class="n">periodOf</span><span class="p">(</span><span class="m">5.</span><span class="n">years</span><span class="p">,</span> <span class="m">13.</span><span class="n">months</span><span class="p">,</span> <span class="m">10.</span><span class="n">days</span><span class="p">)</span>
 
 <span class="c1">// Convert months to years where appropriate</span>
@@ -698,7 +710,7 @@
 <span class="k">val</span> <span class="py">periodBetweenDates</span> <span class="p">=</span> <span class="n">periodBetween</span><span class="p">(</span><span class="n">date1</span><span class="p">,</span> <span class="n">date2</span><span class="p">)</span>
 </code></pre></div>
 
-<h2 id="iso-representation">ISO Representation</h2>
+<h2 id="iso-representation">ISO Representation<a class="headerlink" href="#iso-representation" title="Permanent link">&para;</a></h2>
 <p>Similar to date-times, calling <code>toString()</code> on any duration will return an ISO representation, such as <code>PT23H12M</code> or <code>P0D</code>. <code>String.toDuration()</code> or <code>String.toPeriod()</code> can be used to convert an ISO duration string into an object of the corresponding type.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">period</span> <span class="p">=</span> <span class="n">periodOf</span><span class="p">(</span><span class="m">5.</span><span class="n">years</span><span class="p">,</span> <span class="m">13.</span><span class="n">months</span><span class="p">,</span> <span class="p">(-</span><span class="m">10</span><span class="p">).</span><span class="n">days</span><span class="p">)</span>
 <span class="k">val</span> <span class="py">isoString</span> <span class="p">=</span> <span class="n">period</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span> <span class="c1">// P5Y13M-10D</span>
@@ -739,13 +751,13 @@
             </a>
             
             
-            <a href="../time-intervals/" title="Time Intervals" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../intervals/" title="Ranges and Intervals" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Time Intervals
+                Ranges and Intervals
               </span>
                 </div>
                 <div class="md-flex__cell md-flex__cell--shrink">

@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/extensions/parcelize/">
+        <link rel="canonical" href="https://islandtime.io/extensions/parcelize/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -606,9 +618,9 @@
                   
                 
                 
-                <h1 id="parcelize"><code>@Parcelize</code></h1>
+                <h1 id="parcelize"><code>@Parcelize</code><a class="headerlink" href="#parcelize" title="Permanent link">&para;</a></h1>
 <p>The <code>parcelize-extensions</code> artifact provides a set of parcelers for use with the <a href="https://kotlinlang.org/docs/tutorials/android-plugin.html#parcelable-implementations-generator">Parcelable implementation generator</a> in the Kotlin Android Extensions.</p>
-<h2 id="gradle-setup">Gradle Setup</h2>
+<h2 id="gradle-setup">Gradle Setup<a class="headerlink" href="#gradle-setup" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Groovy</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">implementation</span> <span class="s2">&quot;io.islandtime:parcelize-extensions:0.2.3&quot;</span>
@@ -624,7 +636,7 @@
 
 </div>
 </div>
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Custom parcelers are available for each of Island Time's date-time primitives, durations, and intervals, allowing you to use them within <code>Parcelable</code> classes.</p>
 <div class="highlight"><pre><span></span><code><span class="n">@Parcelize</span>
 <span class="n">@TypeParceler</span><span class="p">&lt;</span><span class="n">Date</span><span class="p">,</span> <span class="n">DateParceler</span><span class="p">&gt;()</span>

@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/interop/">
+        <link rel="canonical" href="https://islandtime.io/basics/interop/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -277,20 +277,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -360,6 +348,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing/" title="Parsing" class="md-nav__link">
+      Parsing
+    </a>
   </li>
 
         
@@ -620,10 +632,77 @@
                   
                 
                 
-                <h1 id="interop">Interop</h1>
-<p>In a Kotlin Multiplatform project, it's often necessary to interoperate with code using platform libraries directly. Island Time provides a number of conversion operators to simplify this.</p>
-<h2 id="java-time-library">Java Time Library</h2>
-<p>Island Time's classes map very closely to those in <code>java.time</code>, making it pretty easy to go back and forth between them.</p>
+                <h1 id="interop">Interop<a class="headerlink" href="#interop" title="Permanent link">&para;</a></h1>
+<p>In a multiplatform project, it's often necessary to interoperate with code that uses platform libraries directly. A number of conversion functions are available to help simplify this process.</p>
+<h2 id="java-time-library">Java Time Library<a class="headerlink" href="#java-time-library" title="Permanent link">&para;</a></h2>
+<p>Island Time's classes map very closely to those in <a href="https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/time/package-summary.html">java.time</a>, making it pretty easy to go back and forth between them. The following table shows the relationship between a subset of the classes:</p>
+<table>
+<thead>
+<tr>
+<th>java.time</th>
+<th>Island Time</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LocalDate</code></td>
+<td><code>Date</code></td>
+<td>A date in arbitrary region</td>
+</tr>
+<tr>
+<td><code>LocalTime</code></td>
+<td><code>Time</code></td>
+<td>A time of day in arbitrary region</td>
+</tr>
+<tr>
+<td><code>LocalDateTime</code></td>
+<td><code>DateTime</code></td>
+<td>A combined date and time of day in arbitrary region</td>
+</tr>
+<tr>
+<td><code>Instant</code></td>
+<td><code>Instant</code></td>
+<td>An instant in time, represented by the number of seconds/nanoseconds relative to the Unix epoch (1970-01-01T00:00Z)</td>
+</tr>
+<tr>
+<td><code>OffsetTime</code></td>
+<td><code>OffsetTime</code></td>
+<td>A time of day with UTC offset</td>
+</tr>
+<tr>
+<td><code>OffsetDateTime</code></td>
+<td><code>OffsetDateTime</code></td>
+<td>A date and time of day with fixed UTC offset</td>
+</tr>
+<tr>
+<td><code>ZonedDateTime</code></td>
+<td><code>ZonedDateTime</code></td>
+<td>A date and time of day in a particular time zone region</td>
+</tr>
+<tr>
+<td><code>ZoneOffset</code></td>
+<td><code>UtcOffset</code></td>
+<td>An offset from UTC</td>
+</tr>
+<tr>
+<td><code>ZoneId</code></td>
+<td><code>TimeZone</code></td>
+<td>An IANA time zone database region ID or fixed offset from UTC</td>
+</tr>
+<tr>
+<td><code>Duration</code></td>
+<td><code>Duration</code></td>
+<td>A (potentially large) duration of time</td>
+</tr>
+<tr>
+<td><code>Period</code></td>
+<td><code>Period</code></td>
+<td>A date-based period of time</td>
+</tr>
+</tbody>
+</table>
+<p>To convert between an Island Time <code>Date</code> and Java <code>LocalDate</code>, you can do something like this:</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">javaLocalDate</span> <span class="p">=</span> <span class="n">java</span><span class="p">.</span><span class="n">time</span><span class="p">.</span><span class="n">LocalDate</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 
 <span class="c1">// Convert a Java LocalDate to Island Time Date</span>
@@ -637,8 +716,9 @@
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">javaDuration</span><span class="p">:</span> <span class="n">java</span><span class="p">.</span><span class="n">time</span><span class="p">.</span><span class="n">Duration</span> <span class="p">=</span> <span class="m">30.</span><span class="n">minutes</span><span class="p">.</span><span class="n">toJavaDuration</span><span class="p">()</span>
 </code></pre></div>
 
-<h2 id="apple-foundation-classes">Apple Foundation Classes</h2>
-<p>We can map between some of the Island Time types and the date-time types provided in Apple's Foundation API, such as <code>NSDate</code>, <code>NSDateComponents</code>, and <code>NSTimeZone</code>. Keep in mind that <code>NSDate</code> and <code>NSTimeInterval</code> are based around floating-point numbers, so conversion can result in lost precision sometimes.</p>
+<p>You can find the full set of conversions in the <a href="../../api/core/io.islandtime.jvm/">io.islandtime.jvm</a> package.</p>
+<h2 id="apple-foundation-classes">Apple Foundation Classes<a class="headerlink" href="#apple-foundation-classes" title="Permanent link">&para;</a></h2>
+<p>We can map between some of the Island Time types and the date-time types provided in Apple's <a href="https://developer.apple.com/documentation/foundation/dates_and_times?language=objc">Foundation API</a>, such as <code>NSDate</code>, <code>NSDateComponents</code>, and <code>NSTimeZone</code>. Keep in mind that <code>NSDate</code> and <code>NSTimeInterval</code> are based around floating-point numbers, so conversion can result in lost precision sometimes.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// NSDate is a timestamp, just like Instant</span>
 <span class="k">val</span> <span class="py">islandInstant</span> <span class="p">=</span> <span class="n">Instant</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">nsDate</span> <span class="p">=</span> <span class="n">islandInstant</span><span class="p">.</span><span class="n">toNSDate</span><span class="p">()</span>
@@ -654,8 +734,9 @@
 <span class="k">val</span> <span class="py">nsTimeInterval</span> <span class="p">=</span> <span class="m">5.</span><span class="n">minutes</span><span class="p">.</span><span class="n">toNSTimeInterval</span><span class="p">()</span>
 </code></pre></div>
 
-<h2 id="kotlintime"><code>kotlin.time</code></h2>
-<p>The Kotlin Standard Library has an experimental <code>Duration</code> type of its own, which you can convert to and from Island Time durations. Kotlin's <code>Duration</code> is based on a floating-point number, so keep in mind that conversion can be lossy.</p>
+<p>The full set of conversions can be found in the <a href="../../api/core/io.islandtime.darwin/">io.islandtime.darwin</a> package.</p>
+<h2 id="kotlintime">kotlin.time<a class="headerlink" href="#kotlintime" title="Permanent link">&para;</a></h2>
+<p>The Kotlin Standard Library has an experimental <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/"><code>Duration</code></a> type of its own, which you can convert to and from Island Time durations. Kotlin's <code>Duration</code> is based on a floating-point number, so keep in mind that conversion can be lossy.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nn">kotlin.time.seconds</span> <span class="k">as</span> <span class="n">kotlinSeconds</span>
 
 <span class="c1">// Convert from Island Time IntMinutes to Kotlin Duration</span>
@@ -682,7 +763,7 @@
     <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
             
-            <a href="../parsing/" title="Parsing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../intervals/" title="Ranges and Intervals" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
                 <div class="md-flex__cell md-flex__cell--shrink">
                     <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
                 </div>
@@ -691,19 +772,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Parsing
+                Ranges and Intervals
               </span>
                 </div>
             </a>
             
             
-            <a href="../../advanced/custom-providers/" title="Custom Providers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../formatting/" title="Formatting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Custom Providers
+                Formatting
               </span>
                 </div>
                 <div class="md-flex__cell md-flex__cell--shrink">

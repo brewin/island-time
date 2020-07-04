@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/api/core/io.islandtime.format/-platform-date-time-text-provider/parsable-text-for/">
+        <link rel="canonical" href="https://islandtime.io/api/core/io.islandtime.format/-platform-date-time-text-provider/parsable-text-for/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../../../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../../../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -556,13 +568,13 @@
                 
                 
                 <p><a href="../../../">core</a> / <a href="../../">io.islandtime.format</a> / <a href="../">PlatformDateTimeTextProvider</a> / <a href="./">parsableTextFor</a></p>
-<h1 id="parsabletextfor">parsableTextFor</h1>
+<h1 id="parsabletextfor">parsableTextFor<a class="headerlink" href="#parsabletextfor" title="Permanent link">&para;</a></h1>
 <p>(iosArm64, iosX64, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun parsableTextFor(field:</code><a href="../../../io.islandtime.base/-date-time-field/"><code>DateTimeField</code></a><code>, styles:</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><code>Set</code></a><code>&lt;</code><a href="../../-text-style/"><code>TextStyle</code></a><code>&gt;, locale: &lt;ERROR CLASS&gt;):</code><a href="../../-parsable-text-list/"><code>ParsableTextList</code></a></p>
 <p>Get a list of all localized text in a set of styles along with the values associated that text. The list will
 be sorted in descending order by the length of text, making it suitable for parsing.</p>
 <p>Any text with conflicting values will be excluded. For example, the English narrow month name "M" could be
 <code>March</code> or <code>May</code>, so any attempt to parse it would be ambiguous.</p>
-<h3 id="parameters">Parameters</h3>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <p><code>field</code> - the field to get text for</p>
 <p><code>styles</code> - the set of styles to include</p>
 <p><code>locale</code> - the locale</p>
@@ -574,7 +586,7 @@ the list of parsable text -- empty if the field is invalid or no styles are spec
 be sorted in descending order by the length of text, making it suitable for parsing.</p>
 <p>Any text with conflicting values will be excluded. For example, the English narrow month name "M" could be
 <code>March</code> or <code>May</code>, so any attempt to parse it would be ambiguous.</p>
-<h3 id="parameters_1">Parameters</h3>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <p><code>field</code> - the field to get text for</p>
 <p><code>styles</code> - the set of styles to include</p>
 <p><code>locale</code> - the locale</p>

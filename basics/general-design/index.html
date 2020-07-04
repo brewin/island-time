@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/general-design/">
+        <link rel="canonical" href="https://islandtime.io/basics/general-design/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -340,20 +340,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -366,6 +354,30 @@
   <li class="md-nav__item">
     <a href="../interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -634,16 +646,16 @@
                   
                 
                 
-                <h1 id="general-design">General Design</h1>
+                <h1 id="general-design">General Design<a class="headerlink" href="#general-design" title="Permanent link">&para;</a></h1>
 <p>Being heavily inspired by the java.time library, Island Time tends to follow many of the same design principles.</p>
-<h2 id="immutability">Immutability</h2>
+<h2 id="immutability">Immutability<a class="headerlink" href="#immutability" title="Permanent link">&para;</a></h2>
 <p>All of the date-time primitives are immutable and thread-safe. Operations that manipulate a date, time, duration, or interval will always return a new object.</p>
-<h2 id="precision">Precision</h2>
+<h2 id="precision">Precision<a class="headerlink" href="#precision" title="Permanent link">&para;</a></h2>
 <p>Island Time uses integer rather than floating-point values, offering a fixed nanosecond precision across the entire supported time scale. This avoids any surprises that might emerge from the use of floating-point arithmetic and the reduction in precision that occurs when representing larger durations.</p>
-<h2 id="overflow-handling">Overflow Handling</h2>
+<h2 id="overflow-handling">Overflow Handling<a class="headerlink" href="#overflow-handling" title="Permanent link">&para;</a></h2>
 <p>When working with dates and times, overflow is almost never a behavior that you want. See <a href="https://en.wikipedia.org/wiki/Year_2000_problem">Y2k</a> or <a href="https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs">Time formatting and storage bugs</a>. Island Time uses checked arithmetic throughout to detect overflow and throw exceptions rather than failing silently.</p>
-<h2 id="type-safety">Type-Safety</h2>
-<p>In general, Island Time tries to prevent non-sensical operations at compile time rather than runtime. To that end, you'll find that there are a lot more classes than there are in a number of other date-time libraries.</p>
+<h2 id="type-safety">Type-Safety<a class="headerlink" href="#type-safety" title="Permanent link">&para;</a></h2>
+<p>In general, Island Time tries to prevent nonsensical operations at compile time rather than runtime. To that end, you'll find that there are a lot more classes than there are in a number of other date-time libraries.</p>
                 
               
               

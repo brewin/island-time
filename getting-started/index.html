@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/getting-started/">
+        <link rel="canonical" href="https://islandtime.io/getting-started/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../images/logo.svg" alt="logo">
 
@@ -398,20 +398,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -424,6 +412,30 @@
   <li class="md-nav__item">
     <a href="../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -752,8 +764,8 @@
                   
                 
                 
-                <h1 id="getting-started">Getting Started</h1>
-<h2 id="supported-platforms">Supported Platforms</h2>
+                <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<h2 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
 <p>As a <a href="https://kotlinlang.org/docs/reference/multiplatform.html">Kotlin Multiplatform</a> library, Island Time isn't restricted to just the JVM or Android. Currently, the following platforms are supported:</p>
 <ul>
 <li>JVM</li>
@@ -763,7 +775,7 @@
 <li>watchOS ARM64/x86</li>
 <li>tvOS ARM64/x64</li>
 </ul>
-<h2 id="version-requirements">Version Requirements</h2>
+<h2 id="version-requirements">Version Requirements<a class="headerlink" href="#version-requirements" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>Your project's Kotlin compiler version must match the version used by Island Time.</p>
@@ -787,12 +799,12 @@
 </tr>
 </tbody>
 </table>
-<h3 id="jvm">JVM</h3>
+<h3 id="jvm">JVM<a class="headerlink" href="#jvm" title="Permanent link">&para;</a></h3>
 <p>Island Time requires Java 8 or above.</p>
-<h3 id="android">Android</h3>
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
 <p>Island Time requires a minimum compile SDK of API 15 or later and Java 8 support should be <a href="https://developer.android.com/studio/write/java8-support">turned on</a>.</p>
-<h2 id="gradle-setup">Gradle Setup</h2>
-<h3 id="common">Common</h3>
+<h2 id="gradle-setup">Gradle Setup<a class="headerlink" href="#gradle-setup" title="Permanent link">&para;</a></h2>
+<h3 id="common">Common<a class="headerlink" href="#common" title="Permanent link">&para;</a></h3>
 <p>Add the following dependency to your project's Gradle script:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Groovy</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
@@ -813,8 +825,9 @@
 <p class="admonition-title">Note</p>
 <p>Island Time publishes Gradle Module Metadata for all multiplatform artifacts. The listed "common" artifacts may be used in the dependency block of any target, common or platform-specific.</p>
 </div>
-<h3 id="android_1">Android</h3>
-<h4 id="android-studio-40-or-later">Android Studio 4.0 or later</h4>
+<p>Extensions are also available for <a href="../extensions/serialization/">serialization</a> and the <a href="../extensions/parcelize/"><code>@Parcelize</code></a> feature on Android.</p>
+<h3 id="android_1">Android<a class="headerlink" href="#android_1" title="Permanent link">&para;</a></h3>
+<h4 id="android-studio-40-or-later">Android Studio 4.0 or later<a class="headerlink" href="#android-studio-40-or-later" title="Permanent link">&para;</a></h4>
 <p>Make sure that <a href="https://developer.android.com/studio/preview/features#j8-desugar">core library desugaring</a> is enabled.</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Groovy</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">android</span> <span class="o">{</span>
@@ -861,9 +874,9 @@
 
 </div>
 </div>
-<h4 id="android-studio-36-or-earlier">Android Studio 3.6 or earlier</h4>
+<h4 id="android-studio-36-or-earlier">Android Studio 3.6 or earlier<a class="headerlink" href="#android-studio-36-or-earlier" title="Permanent link">&para;</a></h4>
 <p>You'll need to add an additional dependency on the ThreeTen Android Backport. You can find details <a href="../extensions/threetenabp/">here</a>.</p>
-<h3 id="snapshot-builds">Snapshot builds</h3>
+<h3 id="snapshot-builds">Snapshot builds<a class="headerlink" href="#snapshot-builds" title="Permanent link">&para;</a></h3>
 <p>Development snapshot builds are available in the Sonatype OSS Snapshot Repository. To use one, you'll need to add that repository to your project's Gradle script:</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Groovy</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">repositories</span> <span class="o">{</span>

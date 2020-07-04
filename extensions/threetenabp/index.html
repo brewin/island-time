@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/extensions/threetenabp/">
+        <link rel="canonical" href="https://islandtime.io/extensions/threetenabp/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -620,9 +632,9 @@
                   
                 
                 
-                <h1 id="threeten-android-backport">ThreeTen Android Backport</h1>
+                <h1 id="threeten-android-backport">ThreeTen Android Backport<a class="headerlink" href="#threeten-android-backport" title="Permanent link">&para;</a></h1>
 <p>Island Time normally depends on the java.time API to access time zone database information, but this is only available in Android API level 26 and above. While Android Studio 4.0's core library desugaring will alleviate this problem soon, in the interim, the <code>threetenabp-extensions</code> artifact provides support for using the <a href="https://github.com/JakeWharton/ThreeTenABP">Android JSR-310 Backport</a> instead.</p>
-<h2 id="gradle-setup">Gradle Setup</h2>
+<h2 id="gradle-setup">Gradle Setup<a class="headerlink" href="#gradle-setup" title="Permanent link">&para;</a></h2>
 <p>Add the following Android-only dependency to your project's Gradle script:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Groovy</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
@@ -639,7 +651,7 @@
 
 </div>
 </div>
-<h2 id="initialization">Initialization</h2>
+<h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
 <p>You need to initialize Island Time with the <a href="../../api/threetenabp/io.islandtime.extensions.threetenabp/-android-three-ten-provider/">AndroidThreeTenProvider</a> before using any of the library's functionality. Generally, you'll want to do this during <code>Application.onCreate()</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Note that it isn&#39;t necessary to call AndroidThreeTen.init() separately</span>
 <span class="n">IslandTime</span><span class="p">.</span><span class="n">initialize</span> <span class="p">{</span>
@@ -653,7 +665,7 @@
 </code></pre></div>
 
 <p>For more information, see <a href="../../advanced/custom-providers/">Custom Providers</a>.</p>
-<h2 id="additional-extensions">Additional Extensions</h2>
+<h2 id="additional-extensions">Additional Extensions<a class="headerlink" href="#additional-extensions" title="Permanent link">&para;</a></h2>
 <p>In addition to the time zone database provider, there is also a set of extension methods allowing you to convert between Island Time types and equivalent Java types in the <code>org.threeten.bp</code> namespace. Consult the <a href="../../api/threetenabp/io.islandtime.extensions.threetenabp/">API docs</a> for more details.</p>
                 
               

@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/api/core/io.islandtime/kotlin.-string/to-year/">
+        <link rel="canonical" href="https://islandtime.io/api/core/io.islandtime/kotlin.-string/to-year/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../../../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../../../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../../../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -556,7 +568,7 @@
                 
                 
                 <p><a href="../../../">core</a> / <a href="../../">io.islandtime</a> / <a href="../">kotlin.String</a> / <a href="./">toYear</a></p>
-<h1 id="toyear">toYear</h1>
+<h1 id="toyear">toYear<a class="headerlink" href="#toyear" title="Permanent link">&para;</a></h1>
 <p>(iosArm64) <code>fun</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>.toYear():</code><a href="../../-year/"><code>Year</code></a>
 (iosX64) <code>fun</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>.toYear():</code><a href="../../-year/"><code>Year</code></a>
 (jvm) <code>fun</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>.toYear():</code><a href="../../-year/"><code>Year</code></a>
@@ -568,7 +580,7 @@
 <p>Convert a string to a <a href="../../-year/#io.islandtime.Year">Year</a>.</p>
 <p>The string is assumed to be an ISO-8601 year. For example, <code>2010</code>, <code>+002010</code>, or 'Y12345'. The output of
 <a href="../../-year/to-string/#io.islandtime.Year$toString()">Year.toString</a> can be safely parsed using this method.</p>
-<h3 id="exceptions">Exceptions</h3>
+<h3 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
 <p><code>DateTimeParseException</code> - if parsing fails</p>
 <p><code>DateTimeException</code> - if the parsed year is invalid(iosArm64) <code>fun</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>.toYear(parser:</code><a href="../../../io.islandtime.parser/-date-time-parser/"><code>DateTimeParser</code></a><code>, settings:</code><a href="../../../io.islandtime.parser/-date-time-parser-settings/"><code>DateTimeParserSettings</code></a><code>= DateTimeParserSettings.DEFAULT):</code><a href="../../-year/"><code>Year</code></a>
 (iosX64) <code>fun</code><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><code>String</code></a><code>.toYear(parser:</code><a href="../../../io.islandtime.parser/-date-time-parser/"><code>DateTimeParser</code></a><code>, settings:</code><a href="../../../io.islandtime.parser/-date-time-parser-settings/"><code>DateTimeParserSettings</code></a><code>= DateTimeParserSettings.DEFAULT):</code><a href="../../-year/"><code>Year</code></a>
@@ -581,7 +593,7 @@
 <p>Convert a string to a <a href="../../-year/#io.islandtime.Year">Year</a> using a specific parser.</p>
 <p>A set of predefined parsers can be found in <a href="../../../io.islandtime.parser/-date-time-parsers/#io.islandtime.parser.DateTimeParsers">DateTimeParsers</a>.</p>
 <p>The parser must be capable of supplying <a href="../../../io.islandtime.base/-date-time-field/-y-e-a-r/#io.islandtime.base.DateTimeField.YEAR">DateTimeField.YEAR</a>.</p>
-<h3 id="exceptions_1">Exceptions</h3>
+<h3 id="exceptions_1">Exceptions<a class="headerlink" href="#exceptions_1" title="Permanent link">&para;</a></h3>
 <p><code>DateTimeParseException</code> - if parsing fails</p>
 <p><code>DateTimeException</code> - if the parsed year is invalid</p>
                 

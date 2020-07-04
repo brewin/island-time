@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/dates-and-times/">
+        <link rel="canonical" href="https://islandtime.io/basics/dates-and-times/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -344,8 +344,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-at-operator" class="md-nav__link">
-    The at operator
+  <a href="#at" class="md-nav__link">
+    at
   </a>
   
 </li>
@@ -358,15 +358,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#arithmetic" class="md-nav__link">
-    Arithmetic
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iso-representation" class="md-nav__link">
-    ISO representation
+  <a href="#addition-and-subtraction" class="md-nav__link">
+    Addition and Subtraction
   </a>
   
 </li>
@@ -397,6 +390,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#iso-representation" class="md-nav__link">
+    ISO Representation
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -422,20 +422,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -448,6 +436,30 @@
   <li class="md-nav__item">
     <a href="../interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -725,8 +737,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-at-operator" class="md-nav__link">
-    The at operator
+  <a href="#at" class="md-nav__link">
+    at
   </a>
   
 </li>
@@ -739,15 +751,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#arithmetic" class="md-nav__link">
-    Arithmetic
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iso-representation" class="md-nav__link">
-    ISO representation
+  <a href="#addition-and-subtraction" class="md-nav__link">
+    Addition and Subtraction
   </a>
   
 </li>
@@ -778,6 +783,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#iso-representation" class="md-nav__link">
+    ISO Representation
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -798,9 +810,9 @@
                   
                 
                 
-                <h1 id="dates-and-times">Dates and Times</h1>
+                <h1 id="dates-and-times">Dates and Times<a class="headerlink" href="#dates-and-times" title="Permanent link">&para;</a></h1>
 <p>Island Time has a wide array of different date-time classes, each tailored to its own set of use cases. These classes model the date and timekeeping system defined in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a>, the international standard for the exchange of dates and times. The ISO standard applies the present-day Gregorian calendar <em>proleptically</em>, which is to say, even to the time period before it was <a href="https://en.wikipedia.org/wiki/Adoption_of_the_Gregorian_calendar">adopted</a>.</p>
-<h2 id="date-representations">Date Representations</h2>
+<h2 id="date-representations">Date Representations<a class="headerlink" href="#date-representations" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -827,7 +839,7 @@
 </tr>
 </tbody>
 </table>
-<p>The <code>Date</code> class represents a date in an ambiguous region. It could be in New York City. It could be in Tokyo. The instants in time that define the start and end of a <code>Date</code> can only be determined in the context of a particular time zone -- hence the <em>ambiguous</em> part.</p>
+<p>The <code>Date</code> class represents a date in an ambiguous region. It could be in New York City. It could be in Tokyo. The instants in time that define the start and end of a <code>Date</code> can only be determined in the context of a particular time zone &mdash; hence the <em>ambiguous</em> part.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Get the current date in the local time zone of the system</span>
 <span class="k">val</span> <span class="py">today</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 
@@ -846,8 +858,8 @@
 <span class="k">val</span> <span class="py">yearMonth</span><span class="p">:</span> <span class="n">YearMonth</span> <span class="p">=</span> <span class="n">Year</span><span class="p">(</span><span class="m">2020</span><span class="p">)</span> <span class="n">at</span> <span class="n">Month</span><span class="p">.</span><span class="n">AUGUST</span>
 </code></pre></div>
 
-<h2 id="time-of-day">Time of Day</h2>
-<p>The <code>Time</code> class can be used to represent a time of the day in an ambiguous region. Unlike <code>Date</code>, there are no classes with reduced precision -- a <code>Time</code> is always precise to the nanosecond.</p>
+<h2 id="time-of-day">Time of Day<a class="headerlink" href="#time-of-day" title="Permanent link">&para;</a></h2>
+<p>The <code>Time</code> class can be used to represent a time of the day in an ambiguous region. Unlike <code>Date</code>, there are no classes with reduced precision &mdash; a <code>Time</code> is always precise to the nanosecond.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Get the current time in the local time zone of the system</span>
 <span class="k">val</span> <span class="py">currentTime</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 
@@ -858,7 +870,7 @@
 <span class="k">val</span> <span class="p">(</span><span class="py">hour</span><span class="p">,</span> <span class="py">minute</span><span class="p">,</span> <span class="py">second</span><span class="p">,</span> <span class="py">nanosecond</span><span class="p">)</span> <span class="p">=</span> <span class="n">time</span>
 </code></pre></div>
 
-<h2 id="combined-date-and-time-of-day">Combined Date and Time of Day</h2>
+<h2 id="combined-date-and-time-of-day">Combined Date and Time of Day<a class="headerlink" href="#combined-date-and-time-of-day" title="Permanent link">&para;</a></h2>
 <p>A <code>DateTime</code> combines a <code>Date</code> and <code>Time</code>, allowing you to represent both in a single data structure, still in an ambiguous region.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a date-time from individual date and time components</span>
 <span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">JANUARY</span><span class="p">,</span> <span class="m">21</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
@@ -876,7 +888,7 @@
 </code></pre></div>
 
 <p>There's no guarantee that a particular <code>DateTime</code> will exist in every time zone and it could even exist twice, all thanks to the fun that is daylight savings time. We'll get into that more shortly, but it's important to keep this in mind since constructing or manipulating a <code>DateTime</code> directly can lead to subtle bugs.</p>
-<h2 id="instants-in-time">Instants in Time</h2>
+<h2 id="instants-in-time">Instants in Time<a class="headerlink" href="#instants-in-time" title="Permanent link">&para;</a></h2>
 <p>The classes we've looked at so far model dates and times in an ambiguous region, but often we want to unambiguously capture an instant in time. There are actually three different classes in Island Time that can do this, each serving a different purpose.</p>
 <table>
 <thead>
@@ -909,12 +921,12 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>To capture an instant along with the local time, you have two options -- <code>OffsetDateTime</code> and <code>ZonedDateTime</code>. Both store a date-time with an offset from UTC, however, <code>ZonedDateTime</code> is also aware of time zone rules, which is an important distinction.</p>
-<h3 id="utcoffset-vs-timezone"><code>UtcOffset</code> vs. <code>TimeZone</code></h3>
-<p>In Island Time, a <code>UtcOffset</code> is just a number of seconds that a local time must be adjusted forward or backward by to be equivalent to UTC. A <code>TimeZone</code> defines the rules used to determine the UTC offset. Time zones fall into two categories -- region-based (<code>TimeZone.Region</code>) and fixed offset (<code>TimeZone.FixedOffset</code>).</p>
+<p>To capture an instant along with the local time, you have two options &mdash; <code>OffsetDateTime</code> and <code>ZonedDateTime</code>. Both store a date-time with an offset from UTC, however, <code>ZonedDateTime</code> is also aware of time zone rules, which is an important distinction.</p>
+<h3 id="utcoffset-vs-timezone"><code>UtcOffset</code> vs. <code>TimeZone</code><a class="headerlink" href="#utcoffset-vs-timezone" title="Permanent link">&para;</a></h3>
+<p>In Island Time, a <code>UtcOffset</code> is just a number of seconds that a local time must be adjusted forward or backward by to be equivalent to UTC. A <code>TimeZone</code> defines the rules used to determine the UTC offset. Time zones fall into two categories &mdash; region-based (<code>TimeZone.Region</code>) and fixed offset (<code>TimeZone.FixedOffset</code>).</p>
 <p>Region-based zones have identifiers, such as "America/New_York" or "Europe/London", that correspond to entries in the <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a>.</p>
 <p>Fixed offset zones have a fixed UTC offset. While region-based zones are generally preferrable, a suitable one may not exist in all situations and sometimes you just want a fixed offset.</p>
-<h3 id="zoneddatetime-vs-offsetdatetime"><code>ZonedDateTime</code> vs. <code>OffsetDateTime</code></h3>
+<h3 id="zoneddatetime-vs-offsetdatetime"><code>ZonedDateTime</code> vs. <code>OffsetDateTime</code><a class="headerlink" href="#zoneddatetime-vs-offsetdatetime" title="Permanent link">&para;</a></h3>
 <p>Most platforms nowadays draw their understanding of time zones from the <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a>, but time zones and their rules change all the time and different systems might have different versions of the database or only a subset of it available. This makes persistance and serialization of <code>ZonedDateTime</code> troublesome since there's the possibility that when it gets read later, the zone can't be found or its rules have changed, thus altering the local date and time.</p>
 <p>Using <code>OffsetDateTime</code> guarantees that you won't get an exception and the value you save will be the value that's read later, making it well-suited for this particular use case. More often than not though, you should use <code>ZonedDateTime</code> since it will handle daylight savings transitions correctly when doing calendrical calculations. You just might want to consider converting to an <code>OffsetDateTime</code> when you persist or serialize your data.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">MARCH</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span>
@@ -947,9 +959,9 @@
 <span class="c1">// Output: 2020-03-07T23:30-08:00</span>
 </code></pre></div>
 
-<h2 id="patterns-and-operators">Patterns and Operators</h2>
-<p>Throughout Island Time's date-time primitives, you'll find a set of patterns that remain relatively constant as well as a number of operators that simplify common tasks.</p>
-<h3 id="the-at-operator">The <code>at</code> operator</h3>
+<h2 id="patterns-and-operators">Patterns and Operators<a class="headerlink" href="#patterns-and-operators" title="Permanent link">&para;</a></h2>
+<p>Throughout Island Time's date-time primitives, you'll find a set of patterns that remain (relatively) constant as well as a number of operators that simplify common tasks.</p>
+<h3 id="at"><code>at</code><a class="headerlink" href="#at" title="Permanent link">&para;</a></h3>
 <p>The <code>at</code> infix function can be used to build up date-time primitives from "smaller" pieces. For example, we can create a <code>DateTime</code> by combining a <code>Date and a</code>Time`.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="n">at</span> <span class="n">Time</span><span class="p">.</span><span class="n">NOON</span>
 </code></pre></div>
@@ -958,13 +970,13 @@
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">zonedDateTime</span> <span class="p">=</span> <span class="n">dateTime</span> <span class="n">at</span> <span class="n">TimeZone</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">()</span>
 </code></pre></div>
 
-<h3 id="copy"><code>copy()</code></h3>
+<h3 id="copy"><code>copy()</code><a class="headerlink" href="#copy" title="Permanent link">&para;</a></h3>
 <p>Similar to Kotlin's data classes, each date-time primitive has a <code>copy()</code> method available, making it easy to create a copy while changing any number of properties.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">copy</span><span class="p">(</span><span class="n">dayOfMonth</span> <span class="p">=</span> <span class="m">15</span><span class="p">)</span>
 <span class="k">val</span> <span class="py">dateTimeAtMidnight</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">time</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">MIDNIGHT</span><span class="p">)</span>
 </code></pre></div>
 
-<h3 id="arithmetic">Arithmetic</h3>
+<h3 id="addition-and-subtraction">Addition and Subtraction<a class="headerlink" href="#addition-and-subtraction" title="Permanent link">&para;</a></h3>
 <p>A <a href="../durations/">duration</a> of time can be added or subtracted from a date-time primitive. Which units are supported will vary depending on whether the primitive is date-based, time-based, or both.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">tomorrow</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="p">+</span> <span class="m">1.</span><span class="n">days</span>
 <span class="k">val</span> <span class="py">yesterday</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="p">-</span> <span class="m">1.</span><span class="n">days</span>
@@ -973,19 +985,7 @@
 </code></pre></div>
 
 <p>When working with <code>ZonedDateTime</code>, adding a day-based period of time may cross a daylight savings time transition, in which case, adding <code>1.days</code> may not be the same as adding <code>24.hours</code>.</p>
-<h3 id="iso-representation">ISO representation</h3>
-<p>Any date-time primitive can be converted to an appropriate ISO string format by simply calling <code>toString()</code>. To convert a string into a date-time primitive, use the appropriate conversion function, such as <code>String.toDate()</code> or <code>String.toInstant()</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
-<span class="k">val</span> <span class="py">isoString</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">toString</span>
-<span class="k">val</span> <span class="py">dateFromString</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">isoString</span><span class="p">.</span><span class="n">toDate</span><span class="p">()</span>
-</code></pre></div>
-
-<p>By default, Island Time reads and writes using ISO-8601 extended format, which is most common. <a href="../../api/core/io.islandtime.parser/-date-time-parsers/">Predefined parsers</a> are also available that can read the less common basic format -- or both basic and extended.</p>
-<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">basicDateString</span> <span class="p">=</span> <span class="s">&quot;20200305&quot;</span>
-<span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">basicDateString</span><span class="p">.</span><span class="n">toDate</span><span class="p">(</span><span class="n">DateTimeParsers</span><span class="p">.</span><span class="n">Iso</span><span class="p">.</span><span class="n">Basic</span><span class="p">.</span><span class="n">DATE</span><span class="p">)</span>
-</code></pre></div>
-
-<h3 id="start-and-end-of-time-periods">Start and end of time periods</h3>
+<h3 id="start-and-end-of-time-periods">Start and end of time periods<a class="headerlink" href="#start-and-end-of-time-periods" title="Permanent link">&para;</a></h3>
 <p>Relative to any date-based primitive, it's possible to get the start or end of a given period, be it the year, month, week, or day.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">startOfYear</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">startOfYear</span>
@@ -994,7 +994,7 @@
 <span class="k">val</span> <span class="py">startOfDay</span><span class="p">:</span> <span class="n">DateTime</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">startOfDay</span>
 </code></pre></div>
 
-<p>When it comes to weeks, we need to consider which day represents the start of the week. According to the ISO standard, that's Monday. However, depending on the locale, that may be on Sunday or Saturday instead. <code>WeekSettings</code> and <code>Locale</code> can be used to provide control over this.</p>
+<p>When it comes to weeks, we need to consider which day represents the start of the week. According to the ISO standard, that's Monday. However, depending on the locale, that may be on Sunday or Saturday instead. <a href="../../api/core/io.islandtime.calendar/-week-settings/"><code>WeekSettings</code></a> and the platform <code>Locale</code> type can be used to provide control over this.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Start of ISO week (Monday start)</span>
 <span class="k">val</span> <span class="py">isoStart</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">startOfWeek</span>
 
@@ -1008,7 +1008,12 @@
 <span class="k">val</span> <span class="py">localeStart</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">startOfWeek</span><span class="p">(</span><span class="n">explicitLocale</span><span class="p">)</span>
 </code></pre></div>
 
-<h3 id="previous-or-next-day-of-week">Previous or next day of week</h3>
+<p>You can also get the week period as a <a href="../intervals/">range or interval</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get the date range of the current week</span>
+<span class="k">val</span> <span class="py">weekRange</span><span class="p">:</span> <span class="n">DateRange</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">weekRange</span><span class="p">(</span><span class="n">WeekSettings</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">())</span>
+</code></pre></div>
+
+<h3 id="previous-or-next-day-of-week">Previous or next day of week<a class="headerlink" href="#previous-or-next-day-of-week" title="Permanent link">&para;</a></h3>
 <p>To get, say, the previous Tuesday from a particular date-time, you can do something like this:</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">now</span> <span class="p">=</span> <span class="n">ZonedDateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 
@@ -1025,7 +1030,7 @@
 <span class="k">val</span> <span class="py">nextWednesdayOrToday</span> <span class="p">=</span> <span class="n">today</span><span class="p">.</span><span class="n">nextOrSame</span><span class="p">(</span><span class="n">WEDNESDAY</span><span class="p">)</span>
 </code></pre></div>
 
-<h3 id="rounding">Rounding</h3>
+<h3 id="rounding">Rounding<a class="headerlink" href="#rounding" title="Permanent link">&para;</a></h3>
 <p>A time or date-time can be rounded up, down, or half-up to the precision of a particular unit or increment.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="c1">// Output: 2020-06-30T06:32:14.168</span>
@@ -1050,6 +1055,15 @@
 <span class="k">val</span> <span class="py">roundedDownTo100Millis</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedDownToNearest</span><span class="p">(</span><span class="m">100.</span><span class="n">milliseconds</span><span class="p">)</span>
 <span class="c1">// Output: 2020-06-30T06:32:14.1</span>
 </code></pre></div>
+
+<h2 id="iso-representation">ISO Representation<a class="headerlink" href="#iso-representation" title="Permanent link">&para;</a></h2>
+<p>Any date-time primitive can be converted to an appropriate ISO string format by simply calling <code>toString()</code>. To convert a string into a date-time primitive, use the appropriate conversion function, such as <code>String.toDate()</code> or <code>String.toInstant()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">isoString</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">date</span><span class="p">.</span><span class="n">toString</span>
+<span class="k">val</span> <span class="py">dateFromString</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">isoString</span><span class="p">.</span><span class="n">toDate</span><span class="p">()</span>
+</code></pre></div>
+
+<p>By default, Island Time reads and writes using ISO-8601 extended format, which is most common. <a href="../parsing/#predefined-parsers">Predefined parsers</a> are also available that can handle other formats.</p>
                 
               
               

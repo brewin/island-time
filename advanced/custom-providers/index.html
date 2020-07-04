@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/advanced/custom-providers/">
+        <link rel="canonical" href="https://islandtime.io/advanced/custom-providers/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -275,20 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basics/time-intervals/" title="Time Intervals" class="md-nav__link">
-      Time Intervals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../../basics/intervals/" title="Ranges and Intervals" class="md-nav__link">
+      Ranges and Intervals
     </a>
   </li>
 
@@ -301,6 +289,30 @@
   <li class="md-nav__item">
     <a href="../../basics/interop/" title="Interop" class="md-nav__link">
       Interop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -592,9 +604,9 @@
                   
                 
                 
-                <h1 id="custom-providers">Custom Providers</h1>
+                <h1 id="custom-providers">Custom Providers<a class="headerlink" href="#custom-providers" title="Permanent link">&para;</a></h1>
 <p>By default, Island Time uses platform APIs to access time zone database information and localized text. Each platform and version of that platform exposes different information though, so there are compromises involved and Island Time may not always behave the way you'd like. Using custom providers, you can work around certain edge cases or make use of different data sources.</p>
-<h2 id="initialization">Initialization</h2>
+<h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
 <p>Prior to using Island Time, it may be initialized with custom providers for time zone rules or localized text. The platform default providers will be used for any that aren't specified explicitly. It's only necessary to initialize Island Time if you're using custom providers.</p>
 <div class="highlight"><pre><span></span><code><span class="n">IslandTime</span><span class="p">.</span><span class="n">initialize</span> <span class="p">{</span>
     <span class="c1">// Override all of the platform default providers with our own</span>
@@ -621,7 +633,7 @@
     <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
             
-            <a href="../../basics/interop/" title="Interop" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../../basics/parsing/" title="Parsing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
                 <div class="md-flex__cell md-flex__cell--shrink">
                     <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
                 </div>
@@ -630,7 +642,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Interop
+                Parsing
               </span>
                 </div>
             </a>

@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://erikc5000.github.io/island-time/basics/time-intervals/">
+        <link rel="canonical" href="https://islandtime.io/basics/intervals/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Time Intervals - Island Time</title>
+        <title>Ranges and Intervals - Island Time</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#time-intervals" class="md-skip">
+        <a href="#ranges-and-intervals" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-header-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Time Intervals
+              Ranges and Intervals
             
           </span>
         </div>
@@ -161,7 +161,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://erikc5000.github.io/island-time" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
+    <a href="https://islandtime.io" title="Island Time" class="md-nav__button md-logo" aria-label="Island Time">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -286,14 +286,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Time Intervals
+        Ranges and Intervals
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Time Intervals" class="md-nav__link md-nav__link--active">
-      Time Intervals
+    <a href="./" title="Ranges and Intervals" class="md-nav__link md-nav__link--active">
+      Ranges and Intervals
     </a>
     
       
@@ -312,8 +312,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nomenclature-ranges-vs-intervals" class="md-nav__link">
-    Nomenclature: "Ranges" vs. "Intervals"
+  <a href="#terminology-ranges-vs-intervals" class="md-nav__link">
+    Terminology: "Ranges" vs. "Intervals"
   </a>
   
 </li>
@@ -326,11 +326,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#time-based-intervals" class="md-nav__link">
-    Time-Based Intervals
+  <a href="#time-intervals" class="md-nav__link">
+    Time Intervals
   </a>
   
-    <nav class="md-nav" aria-label="Time-Based Intervals">
+    <nav class="md-nav" aria-label="Time Intervals">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -341,8 +341,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#iterating-over-time-intervals" class="md-nav__link">
-    Iterating over time intervals
+  <a href="#iterating-over-intervals" class="md-nav__link">
+    Iterating over intervals
   </a>
   
 </li>
@@ -379,8 +379,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../parsing/" title="Parsing" class="md-nav__link">
-      Parsing
+    <a href="../interop/" title="Interop" class="md-nav__link">
+      Interop
     </a>
   </li>
 
@@ -391,8 +391,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../interop/" title="Interop" class="md-nav__link">
-      Interop
+    <a href="../formatting/" title="Formatting" class="md-nav__link">
+      Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing/" title="Parsing" class="md-nav__link">
+      Parsing
     </a>
   </li>
 
@@ -614,8 +626,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nomenclature-ranges-vs-intervals" class="md-nav__link">
-    Nomenclature: "Ranges" vs. "Intervals"
+  <a href="#terminology-ranges-vs-intervals" class="md-nav__link">
+    Terminology: "Ranges" vs. "Intervals"
   </a>
   
 </li>
@@ -628,11 +640,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#time-based-intervals" class="md-nav__link">
-    Time-Based Intervals
+  <a href="#time-intervals" class="md-nav__link">
+    Time Intervals
   </a>
   
-    <nav class="md-nav" aria-label="Time-Based Intervals">
+    <nav class="md-nav" aria-label="Time Intervals">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -643,8 +655,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#iterating-over-time-intervals" class="md-nav__link">
-    Iterating over time intervals
+  <a href="#iterating-over-intervals" class="md-nav__link">
+    Iterating over intervals
   </a>
   
 </li>
@@ -680,7 +692,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/erikc5000/island-time/edit/master/docs/basics/time-intervals.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/erikc5000/island-time/edit/master/docs/basics/intervals.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -688,11 +700,11 @@
                   
                 
                 
-                <h1 id="time-intervals">Time Intervals</h1>
+                <h1 id="ranges-and-intervals">Ranges and Intervals<a class="headerlink" href="#ranges-and-intervals" title="Permanent link">&para;</a></h1>
 <p>Kotlin offers first class support for ranges and Island Time takes full advantage of that, allowing you to model date ranges and time intervals in a way that feels natural.</p>
-<h2 id="nomenclature-ranges-vs-intervals">Nomenclature: "Ranges" vs. "Intervals"</h2>
-<p>In Island Time, "ranges" are inclusive, implementing Kotlin's <code>ClosedRange</code>, while "intervals" are half-open with an exclusive end. When representing time-based intervals, precision differences (ie. millisecond vs nanosecond) can make an inclusive end troublesome to work with, so while you can create an interval from a closed range, it'll be stored, read, and written with an exclusive end.</p>
-<h2 id="daterange"><code>DateRange</code></h2>
+<h2 id="terminology-ranges-vs-intervals">Terminology: "Ranges" vs. "Intervals"<a class="headerlink" href="#terminology-ranges-vs-intervals" title="Permanent link">&para;</a></h2>
+<p>In Island Time, "ranges" are inclusive, implementing Kotlin's <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-closed-range/"><code>ClosedRange</code></a> interface, while "intervals" are half-open with an exclusive end. When representing time-based intervals, precision differences (ie. millisecond vs. nanosecond) can make an inclusive end troublesome to work with, so while you can create an interval from a closed range, it'll be stored, read, and written with an exclusive end.</p>
+<h2 id="daterange"><code>DateRange</code><a class="headerlink" href="#daterange" title="Permanent link">&para;</a></h2>
 <p>A range of dates can be represented by a <code>DateRange</code>, which is also a <a href="https://kotlinlang.org/docs/reference/ranges.html#progression">progression</a>, allowing you to iterate over each day in the range. Using a custom <code>step</code>, you can iterate with an increment of any number of days, weeks, months, or years. You can also use <code>until</code> and <code>downTo</code> just like you can with Kotlin's built-in types.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">clock</span><span class="p">:</span> <span class="n">Clock</span> <span class="p">=</span> <span class="n">SystemClock</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">today</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">(</span><span class="n">clock</span><span class="p">)</span>
@@ -724,8 +736,8 @@
 <span class="k">val</span> <span class="py">period</span><span class="p">:</span> <span class="n">Period</span> <span class="p">=</span> <span class="p">(</span><span class="n">today</span><span class="p">..</span><span class="n">today</span> <span class="p">+</span> <span class="m">1.</span><span class="n">months</span><span class="p">).</span><span class="n">asPeriod</span><span class="p">()</span>
 </code></pre></div>
 
-<h2 id="time-based-intervals">Time-Based Intervals</h2>
-<p>Each of the <a href="../dates-and-times/">date-time classes</a> has a corresponding interval class.</p>
+<h2 id="time-intervals">Time Intervals<a class="headerlink" href="#time-intervals" title="Permanent link">&para;</a></h2>
+<p>Each of Island Time's <a href="../dates-and-times/">date-time</a> classes has a corresponding interval class.</p>
 <table>
 <thead>
 <tr>
@@ -752,16 +764,17 @@
 </tr>
 </tbody>
 </table>
-<p>For <code>OffsetDateTimeInterval</code> and <code>ZonedDateTimeInterval</code>, inclusivity within a time-based interval is based on the instants defined by the start and end points (ie. timeline order, not natural order), ignoring any local time differences.</p>
-<h3 id="converting-a-daterange-to-an-interval">Converting a <code>DateRange</code> to an interval</h3>
+<p>For <code>OffsetDateTimeInterval</code> and <code>ZonedDateTimeInterval</code>, inclusivity within a time interval is based on the instants defined by the start and end points, ignoring any local time differences (ie. timeline order, not natural order).</p>
+<h3 id="converting-a-daterange-to-an-interval">Converting a <code>DateRange</code> to an interval<a class="headerlink" href="#converting-a-daterange-to-an-interval" title="Permanent link">&para;</a></h3>
 <p>A <code>DateRange</code> can be converted directly to an interval representing the period from the start of the first day to the end of the last day.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">today</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">dateRange</span><span class="p">:</span> <span class="n">DateRange</span> <span class="p">=</span> <span class="n">today</span> <span class="p">-</span> <span class="m">1.</span><span class="n">weeks</span> <span class="n">until</span> <span class="n">today</span>
-<span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">dateRange</span><span class="p">.</span><span class="n">toInstantIntervalAt</span><span class="p">(</span><span class="n">TimeZone</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">())</span>
+<span class="k">val</span> <span class="py">zone</span><span class="p">:</span> <span class="n">TimeZone</span> <span class="p">=</span> <span class="n">TimeZone</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">dateRange</span><span class="p">.</span><span class="n">toInstantIntervalAt</span><span class="p">(</span><span class="n">zone</span><span class="p">)</span>
 </code></pre></div>
 
-<h3 id="iterating-over-time-intervals">Iterating over time intervals</h3>
-<p>Only <code>InstantInterval</code> allows iteration, though the other types can be converted easily.</p>
+<h3 id="iterating-over-intervals">Iterating over intervals<a class="headerlink" href="#iterating-over-intervals" title="Permanent link">&para;</a></h3>
+<p>Only <code>InstantInterval</code> allows iteration, though the other interval types can be converted easily enough.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">now</span><span class="p">:</span> <span class="n">ZonedDateTime</span> <span class="p">=</span> <span class="n">ZonedDateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">zonedDateTimeInterval</span><span class="p">:</span> <span class="n">ZonedDateTimeInterval</span> <span class="p">=</span> <span class="n">now</span> <span class="n">until</span> <span class="n">now</span> <span class="p">+</span> <span class="m">1.</span><span class="n">weeks</span>
 <span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">zonedDateTimeInterval</span><span class="p">.</span><span class="n">asInstantInterval</span><span class="p">()</span>
@@ -776,8 +789,8 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="unbounded-and-empty-intervals">Unbounded and Empty Intervals</h2>
-<p>A range or interval may be unbounded on one or both ends -- or empty. The <code>MIN</code> and <code>MAX</code> sentinels can be used to indicate the "far past" or "far future".</p>
+<h2 id="unbounded-and-empty-intervals">Unbounded and Empty Intervals<a class="headerlink" href="#unbounded-and-empty-intervals" title="Permanent link">&para;</a></h2>
+<p>A range or interval may be unbounded on one or both ends &mdash; or empty. The <code>MIN</code> and <code>MAX</code> sentinels can be used to indicate the "far past" or "far future".</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">partiallyBoundedDateRange</span> <span class="p">=</span> <span class="s">&quot;2020-04-12/..&quot;</span><span class="p">.</span><span class="n">toDateRange</span><span class="p">()</span>
 <span class="n">assertFalse</span> <span class="p">{</span> <span class="n">partiallyBoundedDateRange</span><span class="p">.</span><span class="n">isBounded</span><span class="p">()</span> <span class="p">}</span>
 
@@ -793,11 +806,11 @@
 <span class="k">val</span> <span class="py">emptyDateRange</span> <span class="p">=</span> <span class="n">DateRange</span><span class="p">.</span><span class="n">EMPTY</span>
 </code></pre></div>
 
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">"Unbounded" vs. "Open"</p>
-<p>In ISO-8601, an "unbounded" interval is referred to as an "open" interval. This conflicts with the mathematical meaning of "open" though (ie. end points that are exclusive rather than inclusive), so we avoid using that terminology.</p>
+<p>In ISO-8601, an "unbounded" interval is referred to as an "open" interval. However, this conflicts with the mathematical meaning of "open" though (ie. end points that are exclusive rather than inclusive), so we avoid using that terminology.</p>
 </div>
-<h2 id="iso-representation">ISO Representation</h2>
+<h2 id="iso-representation">ISO Representation<a class="headerlink" href="#iso-representation" title="Permanent link">&para;</a></h2>
 <p>As with all of the other types in Island Time, calling <code>toString()</code> on an interval will return an ISO represention, which can be converted back to the appropriate interval type using methods like <code>String.toDateRange()</code> or <code>String.toZonedDateTimeInterval()</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">firstDate</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">MARCH</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
 <span class="k">val</span> <span class="py">secondDate</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">MAY</span><span class="p">,</span> <span class="m">13</span><span class="p">)</span>
@@ -816,7 +829,7 @@
 <span class="k">val</span> <span class="py">readZonedInterval</span> <span class="p">=</span> <span class="n">isoZonedIntervalString</span><span class="p">.</span><span class="n">toZonedDateTimeInterval</span><span class="p">()</span>
 </code></pre></div>
 
-<p>By default, Island Time parses only ISO-8601 extended format, but <a href="../../api/core/io.islandtime.parser/-date-time-parsers/">predefined parsers</a> are also available that can read the less common basic format -- or either format.</p>
+<p>By default, Island Time parses only ISO-8601 extended format, but <a href="../parsing/#predefined-parsers">predefined parsers</a> are also available that can read the less common basic format &mdash; or either format.</p>
                 
               
               
@@ -850,13 +863,13 @@
             </a>
             
             
-            <a href="../parsing/" title="Parsing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../interop/" title="Interop" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Parsing
+                Interop
               </span>
                 </div>
                 <div class="md-flex__cell md-flex__cell--shrink">
