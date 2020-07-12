@@ -546,8 +546,12 @@
                 <p><a href="../../">core</a> / <a href="../">io.islandtime.ranges</a> / <a href="./">toInstantIntervalAt</a></p>
 <h1 id="toinstantintervalat">toInstantIntervalAt<a class="headerlink" href="#toinstantintervalat" title="Permanent link">&para;</a></h1>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-range/"><code>DateRange</code></a><code>.toInstantIntervalAt(zone:</code><a href="../../io.islandtime/-time-zone/"><code>TimeZone</code></a><code>):</code><a href="../-instant-interval/"><code>InstantInterval</code></a></p>
-<p>Convert a range of dates into an <a href="../-instant-interval/#io.islandtime.ranges.InstantInterval">InstantInterval</a> between the starting and ending instants in a particular time
-zone.</p>
+<p>Converts this range to an <a href="../-instant-interval/#io.islandtime.ranges.InstantInterval">InstantInterval</a> between the start of the first day and the end of the last day in <a href="./#io.islandtime.ranges$toInstantIntervalAt(io.islandtime.ranges.DateRange, io.islandtime.TimeZone)/zone">zone</a>.</p>
+<p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-time-interval/"><code>DateTimeInterval</code></a><code>.toInstantIntervalAt(zone:</code><a href="../../io.islandtime/-time-zone/"><code>TimeZone</code></a><code>):</code><a href="../-instant-interval/"><code>InstantInterval</code></a></p>
+<p>Converts this interval to an <a href="../-instant-interval/#io.islandtime.ranges.InstantInterval">InstantInterval</a> where both endpoints are in <a href="./#io.islandtime.ranges$toInstantIntervalAt(io.islandtime.ranges.DateTimeInterval, io.islandtime.TimeZone)/zone">zone</a>.</p>
+<p>Due to daylight savings time transitions, there a few complexities to be aware of. If the local time of either
+endpoint falls within a gap (meaning it doesn't exist), it will be adjusted forward by the length of the gap. If it
+falls within an overlap (meaning the local time exists twice), the earlier offset will be used.</p>
                 
               
               

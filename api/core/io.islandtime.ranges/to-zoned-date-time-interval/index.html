@@ -11,7 +11,7 @@
         <meta name="description" content="Island Time - A Kotlin Multiplatform library for working with dates and times">
       
       
-        <link rel="canonical" href="https://islandtime.io/api/core/io.islandtime.ranges/to-zoned-date-time-interval-at/">
+        <link rel="canonical" href="https://islandtime.io/api/core/io.islandtime.ranges/to-zoned-date-time-interval/">
       
       
         <meta name="author" content="Erik Christensen">
@@ -21,7 +21,7 @@
     
     
       
-        <title>To zoned date time interval at - Island Time</title>
+        <title>To zoned date time interval - Island Time</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tozoneddatetimeintervalat" class="md-skip">
+        <a href="#tozoneddatetimeinterval" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              To zoned date time interval at
+              To zoned date time interval
             
           </span>
         </div>
@@ -535,7 +535,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/erikc5000/island-time/edit/master/docs/api/core/io.islandtime.ranges/to-zoned-date-time-interval-at.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/erikc5000/island-time/edit/master/docs/api/core/io.islandtime.ranges/to-zoned-date-time-interval.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -543,9 +543,28 @@
                   
                 
                 
-                <p><a href="../../">core</a> / <a href="../">io.islandtime.ranges</a> / <a href="./">toZonedDateTimeIntervalAt</a></p>
-<h1 id="tozoneddatetimeintervalat">toZonedDateTimeIntervalAt<a class="headerlink" href="#tozoneddatetimeintervalat" title="Permanent link">&para;</a></h1>
-<p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-range/"><code>DateRange</code></a><code>.toZonedDateTimeIntervalAt(zone:</code><a href="../../io.islandtime/-time-zone/"><code>TimeZone</code></a><code>):</code><a href="../-zoned-date-time-interval/"><code>ZonedDateTimeInterval</code></a></p>
+                <p><a href="../../">core</a> / <a href="../">io.islandtime.ranges</a> / <a href="./">toZonedDateTimeInterval</a></p>
+<h1 id="tozoneddatetimeinterval">toZonedDateTimeInterval<a class="headerlink" href="#tozoneddatetimeinterval" title="Permanent link">&para;</a></h1>
+<p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-offset-date-time-interval/"><code>OffsetDateTimeInterval</code></a><code>.toZonedDateTimeInterval(zone:</code><a href="../../io.islandtime/-time-zone/"><code>TimeZone</code></a><code>, strategy:</code><a href="../../io.islandtime/-offset-conversion-strategy/"><code>OffsetConversionStrategy</code></a><code>):</code><a href="../-zoned-date-time-interval/"><code>ZonedDateTimeInterval</code></a></p>
+<p>Converts this interval to a <a href="../-zoned-date-time-interval/#io.islandtime.ranges.ZonedDateTimeInterval">ZonedDateTimeInterval</a> using the specified <a href="./#io.islandtime.ranges$toZonedDateTimeInterval(io.islandtime.ranges.OffsetDateTimeInterval, io.islandtime.TimeZone, io.islandtime.OffsetConversionStrategy)/strategy">strategy</a> to adjust each endpoint to a valid
+date, time, and offset in <a href="./#io.islandtime.ranges$toZonedDateTimeInterval(io.islandtime.ranges.OffsetDateTimeInterval, io.islandtime.TimeZone, io.islandtime.OffsetConversionStrategy)/zone">zone</a>.</p>
+<ul>
+<li>
+<p><a href="../../io.islandtime/-offset-conversion-strategy/-p-r-e-s-e-r-v-e_-i-n-s-t-a-n-t/#io.islandtime.OffsetConversionStrategy.PRESERVE_INSTANT">OffsetConversionStrategy.PRESERVE_INSTANT</a> - Preserve the instant captured by the date, time, and offset,
+ignoring the local time.</p>
+</li>
+<li>
+<p><a href="../../io.islandtime/-offset-conversion-strategy/-p-r-e-s-e-r-v-e_-l-o-c-a-l_-t-i-m-e/#io.islandtime.OffsetConversionStrategy.PRESERVE_LOCAL_TIME">OffsetConversionStrategy.PRESERVE_LOCAL_TIME</a> - Preserve the local date and time in the new time zone, adjusting
+the offset if needed.</p>
+</li>
+</ul>
+<p>Alternatively, you can use <a href="../as-zoned-date-time-interval/#io.islandtime.ranges$asZonedDateTimeInterval(io.islandtime.ranges.OffsetDateTimeInterval)">asZonedDateTimeInterval</a> to convert each endpoint to a <a href="../../io.islandtime/-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> with an equivalent
+fixed-offset zone. However, this comes with the caveat that a fixed-offset zone lacks knowledge of any region and
+will not respond to daylight savings time changes.</p>
+<p><strong>See Also</strong></p>
+<p><a href="../as-zoned-date-time-interval/#io.islandtime.ranges$asZonedDateTimeInterval(io.islandtime.ranges.OffsetDateTimeInterval)">asZonedDateTimeInterval</a></p>
+<p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-date-range/"><code>DateRange</code></a><code>.~~toZonedDateTimeInterval~~(zone:</code><a href="../../io.islandtime/-time-zone/"><code>TimeZone</code></a><code>):</code><a href="../-zoned-date-time-interval/"><code>ZonedDateTimeInterval</code></a>
+<strong>Deprecated:</strong> Use 'at' instead.</p>
 <p>Convert a range of dates into a <a href="../-zoned-date-time-interval/#io.islandtime.ranges.ZonedDateTimeInterval">ZonedDateTimeInterval</a> between the starting and ending instants in a particular
 time zone.</p>
                 

@@ -770,6 +770,11 @@
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">today</span><span class="p">:</span> <span class="n">Date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">dateRange</span><span class="p">:</span> <span class="n">DateRange</span> <span class="p">=</span> <span class="n">today</span> <span class="p">-</span> <span class="m">1.</span><span class="n">weeks</span> <span class="n">until</span> <span class="n">today</span>
 <span class="k">val</span> <span class="py">zone</span><span class="p">:</span> <span class="n">TimeZone</span> <span class="p">=</span> <span class="n">TimeZone</span><span class="p">.</span><span class="n">systemDefault</span><span class="p">()</span>
+
+<span class="c1">// Convert to a ZonedDateTimeInterval</span>
+<span class="k">val</span> <span class="py">zonedDateTimeInterval</span><span class="p">:</span> <span class="n">ZonedDateTimeInterval</span> <span class="p">=</span> <span class="n">dateRange</span> <span class="n">at</span> <span class="n">zone</span>
+
+<span class="c1">// Convert to an InstantInterval</span>
 <span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">dateRange</span><span class="p">.</span><span class="n">toInstantIntervalAt</span><span class="p">(</span><span class="n">zone</span><span class="p">)</span>
 </code></pre></div>
 
@@ -777,7 +782,7 @@
 <p>Only <code>InstantInterval</code> allows iteration, though the other interval types can be converted easily enough.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">now</span><span class="p">:</span> <span class="n">ZonedDateTime</span> <span class="p">=</span> <span class="n">ZonedDateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="k">val</span> <span class="py">zonedDateTimeInterval</span><span class="p">:</span> <span class="n">ZonedDateTimeInterval</span> <span class="p">=</span> <span class="n">now</span> <span class="n">until</span> <span class="n">now</span> <span class="p">+</span> <span class="m">1.</span><span class="n">weeks</span>
-<span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">zonedDateTimeInterval</span><span class="p">.</span><span class="n">asInstantInterval</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">instantInterval</span><span class="p">:</span> <span class="n">InstantInterval</span> <span class="p">=</span> <span class="n">zonedDateTimeInterval</span><span class="p">.</span><span class="n">toInstantInterval</span><span class="p">()</span>
 </code></pre></div>
 
 <p>Unlike with date ranges, the <code>step</code> is necessary to create a progression.</p>
@@ -822,8 +827,8 @@
 <span class="k">val</span> <span class="py">readDateRange</span> <span class="p">=</span> <span class="n">isoDateRangeString</span><span class="p">.</span><span class="n">toDateRange</span><span class="p">()</span>
 
 <span class="k">val</span> <span class="py">zone</span> <span class="p">=</span> <span class="n">TimeZone</span><span class="p">(</span><span class="s">&quot;America/New_York&quot;</span><span class="p">)</span>
-<span class="k">val</span> <span class="py">zonedInterval</span><span class="p">:</span> <span class="n">ZonedDateTimeInterval</span> <span class="p">=</span> <span class="n">dateRange</span><span class="p">.</span><span class="n">toZonedDateTimeIntervalAt</span><span class="p">(</span><span class="n">zone</span><span class="p">)</span>
-<span class="k">val</span> <span class="py">isoZonedIntervalString</span> <span class="p">=</span> <span class="n">instantInterval</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
+<span class="k">val</span> <span class="py">zonedInterval</span><span class="p">:</span> <span class="n">ZonedDateTimeInterval</span> <span class="p">=</span> <span class="n">dateRange</span> <span class="n">at</span> <span class="n">zone</span>
+<span class="k">val</span> <span class="py">isoZonedIntervalString</span> <span class="p">=</span> <span class="n">zonedInterval</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
 <span class="c1">// Output: 2020-03-01T00:00-05:00[America/New_York]/2020-05-13T23:59:59.999999999-04:00[America/New_York]</span>
 
 <span class="k">val</span> <span class="py">readZonedInterval</span> <span class="p">=</span> <span class="n">isoZonedIntervalString</span><span class="p">.</span><span class="n">toZonedDateTimeInterval</span><span class="p">()</span>

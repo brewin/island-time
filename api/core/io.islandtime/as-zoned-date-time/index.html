@@ -546,10 +546,11 @@
                 <p><a href="../../">core</a> / <a href="../">io.islandtime</a> / <a href="./">asZonedDateTime</a></p>
 <h1 id="aszoneddatetime">asZonedDateTime<a class="headerlink" href="#aszoneddatetime" title="Permanent link">&para;</a></h1>
 <p>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <code>fun</code><a href="../-offset-date-time/"><code>OffsetDateTime</code></a><code>.asZonedDateTime():</code><a href="../-zoned-date-time/"><code>ZonedDateTime</code></a></p>
-<p>Convert to a <a href="../-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> with a fixed offset time zone.</p>
+<p>Converts this <a href="../-offset-date-time/#io.islandtime.OffsetDateTime">OffsetDateTime</a> to an equivalent <a href="../-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> using a fixed-offset time zone.</p>
+<p>This comes with the caveat that a fixed-offset zone lacks knowledge of any region and will not respond to daylight
+savings time changes. To convert to a region-based zone, use <a href="../to-zoned-date-time/#io.islandtime$toZonedDateTime(io.islandtime.OffsetDateTime, io.islandtime.TimeZone, io.islandtime.OffsetConversionStrategy)">toZonedDateTime</a> instead.</p>
 <p><strong>See Also</strong></p>
-<p><a href="../instant-at/#io.islandtime$instantAt(io.islandtime.OffsetDateTime, io.islandtime.TimeZone)">instantAt</a></p>
-<p><a href="../date-time-at/#io.islandtime$dateTimeAt(io.islandtime.OffsetDateTime, io.islandtime.TimeZone)">dateTimeAt</a></p>
+<p><a href="../to-zoned-date-time/#io.islandtime$toZonedDateTime(io.islandtime.OffsetDateTime, io.islandtime.TimeZone, io.islandtime.OffsetConversionStrategy)">toZonedDateTime</a></p>
                 
               
               

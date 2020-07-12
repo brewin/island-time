@@ -635,6 +635,10 @@
 <td>A month of the year.<code>enum class Month</code></td>
 </tr>
 <tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-offset-conversion-strategy/">OffsetConversionStrategy</a></td>
+<td>Strategy to use when converting a local date-time accompanied by a <a href="-utc-offset/#io.islandtime.UtcOffset">UtcOffset</a> to a date and time that are valid according to the rules of a <a href="-time-zone/#io.islandtime.TimeZone">TimeZone</a>.<code>enum class OffsetConversionStrategy</code></td>
+</tr>
+<tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-offset-date-time/">OffsetDateTime</a></td>
 <td>A date and time of day with an offset from UTC.<code>class OffsetDateTime :</code><a href="../io.islandtime.base/-time-point/"><code>TimePoint</code></a><code>&lt;</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>&gt;</code></td>
 </tr>
@@ -721,15 +725,15 @@
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="as-time-zone/">asTimeZone</a></td>
-<td>Convert a UTC offset into a <a href="-time-zone/#io.islandtime.TimeZone">TimeZone</a> with a fixed offset.<code>fun</code><a href="-utc-offset/"><code>UtcOffset</code></a><code>.asTimeZone():</code><a href="-time-zone/"><code>TimeZone</code></a></td>
+<td>Converts this <a href="-utc-offset/#io.islandtime.UtcOffset">UtcOffset</a> into a fixed-offset <a href="-time-zone/#io.islandtime.TimeZone">TimeZone</a>.<code>fun</code><a href="-utc-offset/"><code>UtcOffset</code></a><code>.asTimeZone():</code><a href="-time-zone/"><code>TimeZone</code></a></td>
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="as-utc-offset/">asUtcOffset</a></td>
-<td>Convert a duration of hours into a UTC time offset of the same length.<code>fun</code><a href="../io.islandtime.measures/-int-hours/"><code>IntHours</code></a><code>.asUtcOffset():</code><a href="-utc-offset/"><code>UtcOffset</code></a><br>Convert a duration of minutes into a UTC time offset of the same length.<code>fun</code><a href="../io.islandtime.measures/-int-minutes/"><code>IntMinutes</code></a><code>.asUtcOffset():</code><a href="-utc-offset/"><code>UtcOffset</code></a><br>Convert a duration of seconds into a UTC time offset of the same length.<code>fun</code><a href="../io.islandtime.measures/-int-seconds/"><code>IntSeconds</code></a><code>.asUtcOffset():</code><a href="-utc-offset/"><code>UtcOffset</code></a></td>
+<td>Converts a duration of hours into a UTC time offset of the same length.<code>fun</code><a href="../io.islandtime.measures/-int-hours/"><code>IntHours</code></a><code>.asUtcOffset():</code><a href="-utc-offset/"><code>UtcOffset</code></a><br>Converts a duration of minutes into a UTC time offset of the same length.<code>fun</code><a href="../io.islandtime.measures/-int-minutes/"><code>IntMinutes</code></a><code>.asUtcOffset():</code><a href="-utc-offset/"><code>UtcOffset</code></a><br>Converts a duration of seconds into a UTC time offset of the same length.<code>fun</code><a href="../io.islandtime.measures/-int-seconds/"><code>IntSeconds</code></a><code>.asUtcOffset():</code><a href="-utc-offset/"><code>UtcOffset</code></a></td>
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="as-zoned-date-time/">asZonedDateTime</a></td>
-<td>Convert to a <a href="-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> with a fixed offset time zone.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.asZonedDateTime():</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
+<td>Converts this <a href="-offset-date-time/#io.islandtime.OffsetDateTime">OffsetDateTime</a> to an equivalent <a href="-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> using a fixed-offset time zone.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.asZonedDateTime():</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="at/">at</a></td>
@@ -753,7 +757,7 @@
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="date-time-at/">dateTimeAt</a></td>
-<td>The <a href="-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> with the same date and time at <a href="date-time-at/#io.islandtime$dateTimeAt(io.islandtime.OffsetDateTime, io.islandtime.TimeZone)/zone">zone</a>. The offset will be preserved if possible, but may require adjustment.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.dateTimeAt(zone:</code><a href="-time-zone/"><code>TimeZone</code></a><code>):</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
+<td><code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.~~dateTimeAt~~(zone:</code><a href="-time-zone/"><code>TimeZone</code></a><code>):</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="end-of-day-at/">endOfDayAt</a></td>
@@ -765,7 +769,7 @@
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="instant-at/">instantAt</a></td>
-<td>The <a href="-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> representing the same instant in time at <a href="instant-at/#io.islandtime$instantAt(io.islandtime.OffsetDateTime, io.islandtime.TimeZone)/zone">zone</a>. The local date, time, and offset may differ.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.instantAt(zone:</code><a href="-time-zone/"><code>TimeZone</code></a><code>):</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
+<td><code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.~~instantAt~~(zone:</code><a href="-time-zone/"><code>TimeZone</code></a><code>):</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="same-instant-at/">sameInstantAt</a></td>
@@ -789,7 +793,35 @@
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-date-time-at/">toDateTimeAt</a></td>
-<td>Convert to a <a href="-date-time/#io.islandtime.DateTime">DateTime</a> at a particular offset from UTC.<code>fun</code><a href="-instant/"><code>Instant</code></a><code>.toDateTimeAt(offset:</code><a href="-utc-offset/"><code>UtcOffset</code></a><code>):</code><a href="-date-time/"><code>DateTime</code></a></td>
+<td>Converts this instant to the corresponding <a href="-date-time/#io.islandtime.DateTime">DateTime</a> in <a href="to-date-time-at/#io.islandtime$toDateTimeAt(io.islandtime.Instant, io.islandtime.TimeZone)/zone">zone</a>.<code>fun</code><a href="-instant/"><code>Instant</code></a><code>.toDateTimeAt(zone:</code><a href="-time-zone/"><code>TimeZone</code></a><code>):</code><a href="-date-time/"><code>DateTime</code></a><br>Converts this instant to the corresponding <a href="-date-time/#io.islandtime.DateTime">DateTime</a> at <a href="to-date-time-at/#io.islandtime$toDateTimeAt(io.islandtime.Instant, io.islandtime.UtcOffset)/offset">offset</a>.<code>fun</code><a href="-instant/"><code>Instant</code></a><code>.toDateTimeAt(offset:</code><a href="-utc-offset/"><code>UtcOffset</code></a><code>):</code><a href="-date-time/"><code>DateTime</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-instant/">toInstant</a></td>
+<td>Converts this date-time to the <a href="-instant/#io.islandtime.Instant">Instant</a> representing the same time point.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.toInstant():</code><a href="-instant/"><code>Instant</code></a><br><code>fun</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a><code>.toInstant():</code><a href="-instant/"><code>Instant</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-instant-at/">toInstantAt</a></td>
+<td>Converts this date-time to the corresponding <a href="-instant/#io.islandtime.Instant">Instant</a> at <a href="to-instant-at/#io.islandtime$toInstantAt(io.islandtime.DateTime, io.islandtime.UtcOffset)/offset">offset</a>.<code>fun</code><a href="-date-time/"><code>DateTime</code></a><code>.toInstantAt(offset:</code><a href="-utc-offset/"><code>UtcOffset</code></a><code>):</code><a href="-instant/"><code>Instant</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-offset-date-time/">toOffsetDateTime</a></td>
+<td>Returns the combined date, time, and UTC offset.<code>fun</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a><code>.toOffsetDateTime():</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-offset-time/">toOffsetTime</a></td>
+<td>Returns the combined time and UTC offset.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.toOffsetTime():</code><a href="-offset-time/"><code>OffsetTime</code></a><br><code>fun</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a><code>.toOffsetTime():</code><a href="-offset-time/"><code>OffsetTime</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-year/">toYear</a></td>
+<td>Returns this date with the precision reduced to the year.<code>fun</code><a href="-year-month/"><code>YearMonth</code></a><code>.toYear():</code><a href="-year/"><code>Year</code></a><br><code>fun</code><a href="-date/"><code>Date</code></a><code>.toYear():</code><a href="-year/"><code>Year</code></a><br>Returns this date-time with the precision reduced to the year.<code>fun</code><a href="-date-time/"><code>DateTime</code></a><code>.toYear():</code><a href="-year/"><code>Year</code></a><br><code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.toYear():</code><a href="-year/"><code>Year</code></a><br><code>fun</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a><code>.toYear():</code><a href="-year/"><code>Year</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-year-month/">toYearMonth</a></td>
+<td>Returns this date with the precision reduced to the year-month.<code>fun</code><a href="-date/"><code>Date</code></a><code>.toYearMonth():</code><a href="-year-month/"><code>YearMonth</code></a><br>Returns this date-time with the precision reduced to the year-month.<code>fun</code><a href="-date-time/"><code>DateTime</code></a><code>.toYearMonth():</code><a href="-year-month/"><code>YearMonth</code></a><br><code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.toYearMonth():</code><a href="-year-month/"><code>YearMonth</code></a><br><code>fun</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a><code>.toYearMonth():</code><a href="-year-month/"><code>YearMonth</code></a></td>
+</tr>
+<tr>
+<td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="to-zoned-date-time/">toZonedDateTime</a></td>
+<td>Converts this <a href="-offset-date-time/#io.islandtime.OffsetDateTime">OffsetDateTime</a> to a <a href="-zoned-date-time/#io.islandtime.ZonedDateTime">ZonedDateTime</a> using the specified <a href="to-zoned-date-time/#io.islandtime$toZonedDateTime(io.islandtime.OffsetDateTime, io.islandtime.TimeZone, io.islandtime.OffsetConversionStrategy)/strategy">strategy</a> to adjust it to a valid date, time, and offset in <a href="to-zoned-date-time/#io.islandtime$toZonedDateTime(io.islandtime.OffsetDateTime, io.islandtime.TimeZone, io.islandtime.OffsetConversionStrategy)/zone">zone</a>.<code>fun</code><a href="-offset-date-time/"><code>OffsetDateTime</code></a><code>.toZonedDateTime(zone:</code><a href="-time-zone/"><code>TimeZone</code></a><code>, strategy:</code><a href="-offset-conversion-strategy/"><code>OffsetConversionStrategy</code></a><code>):</code><a href="-zoned-date-time/"><code>ZonedDateTime</code></a></td>
 </tr>
 <tr>
 <td>(iosArm64, iosX64, jvm, macosX64, tvosArm64, tvosX64, watchosArm64, watchosX86) <a href="-utc-offset/">UtcOffset</a></td>
