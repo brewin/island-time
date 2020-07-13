@@ -839,7 +839,7 @@
 </tr>
 </tbody>
 </table>
-<p>The <code>Date</code> class represents a date in an ambiguous region. It could be in New York City. It could be in Tokyo. The instants in time that define the start and end of a <code>Date</code> can only be determined in the context of a particular time zone &mdash; hence the <em>ambiguous</em> part.</p>
+<p>The <a href="../../api/core/io.islandtime/-date/"><code>Date</code></a> class represents a date in an ambiguous region. It could be in New York City. It could be in Tokyo. The instants in time that define the start and end of a <code>Date</code> can only be determined in the context of a particular time zone &mdash; hence the <em>ambiguous</em> part.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Get the current date in the local time zone of the system</span>
 <span class="k">val</span> <span class="py">today</span> <span class="p">=</span> <span class="n">Date</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 
@@ -850,7 +850,7 @@
 <span class="k">val</span> <span class="py">cincoDeMayo</span> <span class="p">=</span> <span class="s">&quot;2020-05-05&quot;</span><span class="p">.</span><span class="n">toDate</span><span class="p">()</span>
 </code></pre></div>
 
-<p>It's also possible to represent a date with reduced precision. For example, a <code>YearMonth</code> could be used to represent a credit card expiration date containing just a year and month.</p>
+<p>It's also possible to represent a date with reduced precision. For example, a <a href="../../api/core/io.islandtime/-year-month/"><code>YearMonth</code></a> could be used to represent a credit card expiration date containing just a year and month.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a year-month from a year and month</span>
 <span class="k">val</span> <span class="py">expiration</span> <span class="p">=</span> <span class="n">YearMonth</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
 
@@ -859,7 +859,7 @@
 </code></pre></div>
 
 <h2 id="time-of-day">Time of Day<a class="headerlink" href="#time-of-day" title="Permanent link">&para;</a></h2>
-<p>The <code>Time</code> class can be used to represent a time of the day in an ambiguous region. Unlike <code>Date</code>, there are no classes with reduced precision &mdash; a <code>Time</code> is always precise to the nanosecond.</p>
+<p>The <a href="../../api/core/io.islandtime/-time/"><code>Time</code></a> class can be used to represent a time of the day in an ambiguous region. Unlike <code>Date</code>, there are no classes with reduced precision &mdash; a <code>Time</code> is always precise to the nanosecond.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Get the current time in the local time zone of the system</span>
 <span class="k">val</span> <span class="py">currentTime</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 
@@ -871,7 +871,7 @@
 </code></pre></div>
 
 <h2 id="combined-date-and-time-of-day">Combined Date and Time of Day<a class="headerlink" href="#combined-date-and-time-of-day" title="Permanent link">&para;</a></h2>
-<p>A <code>DateTime</code> combines a <code>Date</code> and <code>Time</code>, allowing you to represent both in a single data structure, still in an ambiguous region.</p>
+<p>A <a href="../../api/core/io.islandtime/-date-time/"><code>DateTime</code></a> combines a <code>Date</code> and <code>Time</code>, allowing you to represent both in a single data structure, still in an ambiguous region.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a date-time from individual date and time components</span>
 <span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">(</span><span class="m">2020</span><span class="p">,</span> <span class="n">Month</span><span class="p">.</span><span class="n">JANUARY</span><span class="p">,</span> <span class="m">21</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
 
@@ -912,7 +912,7 @@
 </tr>
 </tbody>
 </table>
-<p>An <code>Instant</code> is simply a number of seconds and nanoseconds that have elpased since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a> (<code>1970-01-01T00:00Z</code>), ignoring leap seconds. There's no concept of "date" without conversion to one of the other types. Practically speaking, this is the class you should use when you don't care about the local time and just want a <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a> timestamp.</p>
+<p>An <a href="../../api/core/io.islandtime/-instant/"><code>Instant</code></a> is simply a number of seconds and nanoseconds that have elpased since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a> (<code>1970-01-01T00:00Z</code>), ignoring leap seconds. There's no concept of "date" without conversion to one of the other types. Practically speaking, this is the class you should use when you don't care about the local time and just want a <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a> timestamp.</p>
 <div class="highlight"><pre><span></span><code><span class="k">data</span> <span class="k">class</span> <span class="nc">DogDto</span><span class="p">(</span>
     <span class="k">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
     <span class="k">val</span> <span class="py">breed</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
@@ -921,9 +921,9 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>To capture an instant along with the local time, you have two options &mdash; <code>OffsetDateTime</code> and <code>ZonedDateTime</code>. Both store a date-time with an offset from UTC, however, <code>ZonedDateTime</code> is also aware of time zone rules, which is an important distinction.</p>
+<p>To capture an instant along with the local time, you have two options &mdash; <a href="../../api/core/io.islandtime/-offset-date-time/"><code>OffsetDateTime</code></a> and <a href="../../api/core/io.islandtime/-zoned-date-time/"><code>ZonedDateTime</code></a>. Both store a date-time with an offset from UTC, however, <code>ZonedDateTime</code> is also aware of time zone rules, which is an important distinction.</p>
 <h3 id="utcoffset-vs-timezone"><code>UtcOffset</code> vs. <code>TimeZone</code><a class="headerlink" href="#utcoffset-vs-timezone" title="Permanent link">&para;</a></h3>
-<p>In Island Time, a <code>UtcOffset</code> is just a number of seconds that a local time must be adjusted forward or backward by to be equivalent to UTC. A <code>TimeZone</code> defines the rules used to determine the UTC offset. Time zones fall into two categories &mdash; region-based (<code>TimeZone.Region</code>) and fixed offset (<code>TimeZone.FixedOffset</code>).</p>
+<p>In Island Time, a <a href="../../api/core/io.islandtime/-utc-offset/"><code>UtcOffset</code></a> is just a number of seconds that a local time must be adjusted forward or backward by to be equivalent to UTC. A <a href="../../api/core/io.islandtime/-time-zone/"><code>TimeZone</code></a> defines the rules used to determine the UTC offset. Time zones fall into two categories &mdash; region-based (<code>TimeZone.Region</code>) and fixed offset (<code>TimeZone.FixedOffset</code>).</p>
 <p>Region-based zones have identifiers, such as "America/New_York" or "Europe/London", that correspond to entries in the <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a>.</p>
 <p>Fixed offset zones have a fixed UTC offset. While region-based zones are generally preferrable, a suitable one may not exist in all situations and sometimes you just want a fixed offset.</p>
 <h3 id="zoneddatetime-vs-offsetdatetime"><code>ZonedDateTime</code> vs. <code>OffsetDateTime</code><a class="headerlink" href="#zoneddatetime-vs-offsetdatetime" title="Permanent link">&para;</a></h3>
@@ -945,7 +945,7 @@
 <span class="c1">// Output: 2020-03-08T01:30-05:00 [America/New_York]</span>
 
 <span class="c1">// It&#39;s easy to convert a ZonedDateTime to an OffsetDateTime</span>
-<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span><span class="p">.</span><span class="n">asOffsetDateTime</span><span class="p">())</span>
+<span class="n">println</span><span class="p">(</span><span class="n">zonedDateTime</span><span class="p">.</span><span class="n">toOffsetDateTime</span><span class="p">())</span>
 <span class="c1">// Output: 2020-03-08T03:30-04:00</span>
 
 <span class="c1">// It&#39;s also possible to change the time zone such that it uses a fixed offset</span>
@@ -1031,7 +1031,7 @@
 </code></pre></div>
 
 <h3 id="rounding">Rounding<a class="headerlink" href="#rounding" title="Permanent link">&para;</a></h3>
-<p>A time or date-time can be rounded up, down, or half-up to the precision of a particular unit or increment.</p>
+<p>A time or date-time can be rounded up, down, or half-up to the precision of a particular unit.</p>
 <div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
 <span class="c1">// Output: 2020-06-30T06:32:14.168</span>
 
@@ -1039,17 +1039,19 @@
 <span class="k">val</span> <span class="py">roundedToMinute</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedTo</span><span class="p">(</span><span class="n">MINUTES</span><span class="p">)</span>
 <span class="c1">// Output: 2020-06-30T06:32</span>
 
-<span class="c1">// Round half-up to the nearest 15 minutes</span>
-<span class="k">val</span> <span class="py">roundedToNearest15Mins</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedToNearest</span><span class="p">(</span><span class="m">15.</span><span class="n">minutes</span><span class="p">)</span>
-<span class="c1">// Output: 2020-06-30T06:30</span>
-
 <span class="c1">// Round up to the nearest hour</span>
 <span class="k">val</span> <span class="py">roundedUpToHour</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedUpTo</span><span class="p">(</span><span class="n">HOURS</span><span class="p">)</span>
 <span class="c1">// Output: 2020-06-30T07:00</span>
 
-<span class="c1">// Round down to the nearest hour</span>
+<span class="c1">// Round down to the nearest hour (alternatively, use can use roundedDownTo())</span>
 <span class="k">val</span> <span class="py">roundedDownToHour</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">truncatedTo</span><span class="p">(</span><span class="n">HOURS</span><span class="p">)</span>
 <span class="c1">// Output: 2020-06-30T06:00</span>
+</code></pre></div>
+
+<p>You can also round to the nearest 15 minutes &mdash; or whatever increment you'd like.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Round half-up to the nearest 15 minutes</span>
+<span class="k">val</span> <span class="py">roundedToNearest15Mins</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedToNearest</span><span class="p">(</span><span class="m">15.</span><span class="n">minutes</span><span class="p">)</span>
+<span class="c1">// Output: 2020-06-30T06:30</span>
 
 <span class="c1">// Round down to the nearest 100 milliseconds</span>
 <span class="k">val</span> <span class="py">roundedDownTo100Millis</span> <span class="p">=</span> <span class="n">dateTime</span><span class="p">.</span><span class="n">roundedDownToNearest</span><span class="p">(</span><span class="m">100.</span><span class="n">milliseconds</span><span class="p">)</span>
